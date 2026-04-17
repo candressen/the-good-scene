@@ -9,145 +9,184 @@ export const metadata: Metadata = {
 export default function MissionPage() {
   return (
     <div>
-      {/* SECTION 1 — Dark hero with decorative shapes */}
-      <section className='relative min-h-[680px] overflow-hidden bg-[#1e1716] px-6 py-24 flex items-center'>
-        {/* Decorative layered shapes — coral + purple behind photo */}
-        <div className='pointer-events-none absolute right-0 top-0 h-full w-1/2'>
-          <div className='absolute right-8 top-12 h-[520px] w-[500px] rounded-[40px] bg-[#e7645b] opacity-80 rotate-6' />
-          <div className='absolute right-12 top-16 h-[500px] w-[480px] rounded-[40px] bg-[#a791e3] opacity-70 rotate-3' />
-          <img
-            src='/images/our-mission-14.jpg'
-            className='absolute right-16 top-20 h-[480px] w-[460px] rounded-[32px] object-cover'
-            alt=''
-          />
-        </div>
+      <section className='relative bg-[#1e1716] overflow-hidden' style={{ minHeight: '760px' }}>
+        <div className='mx-auto max-w-[1440px] flex items-center relative' style={{ minHeight: '760px' }}>
+          <div className='relative z-10 px-24 py-24 max-w-[620px]'>
+            <h1 className='font-playfair text-6xl font-bold text-white leading-tight mb-6'>Our Mission</h1>
+            <p className='font-poppins text-lg text-white/70 leading-relaxed mb-10'>
+              We are building a more thoughtful way to experience social life — one that values intention, comfort,
+              and meaningful connection over noise and volume.
+            </p>
+            <Link
+              href='/events'
+              className='inline-flex items-center gap-2 bg-white text-[#1e1716] rounded-full px-6 py-3 text-sm font-semibold hover:bg-[#f6f6f6] transition'
+            >
+              Explore More →
+            </Link>
+          </div>
 
-        <div className='relative z-10 max-w-[580px]'>
-          <h1 className='mb-6 font-playfair text-6xl font-bold leading-tight text-white'>
-            Our Mission
-          </h1>
-          <p className='mb-10 font-poppins text-lg leading-relaxed text-white/70'>
-            We are building a more thoughtful way to experience social life — one that values intention, comfort, and meaningful connection over noise and volume.
-          </p>
-          <Link
-            href='/events'
-            className='inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1e1716] transition hover:bg-[#f6f6f6]'
-          >
-            Explore More →
-          </Link>
+          <div className='absolute right-0 top-0 bottom-0 w-[55%] overflow-hidden'>
+            <div
+              className='absolute'
+              style={{
+                right: '-60px',
+                top: '80px',
+                width: '764px',
+                height: '520px',
+                background: '#e7645b',
+                borderRadius: '32px',
+                transform: 'rotate(-3deg)',
+              }}
+            />
+            <div
+              className='absolute'
+              style={{
+                right: '-80px',
+                top: '40px',
+                width: '754px',
+                height: '502px',
+                background: '#a791e3',
+                borderRadius: '32px',
+                transform: 'rotate(-1deg)',
+              }}
+            />
+            <img
+              src='/images/our-mission-14.jpg'
+              className='absolute object-cover rounded-[24px]'
+              style={{ right: '-40px', top: '60px', width: '703px', height: '475px' }}
+              alt=''
+            />
+          </div>
         </div>
       </section>
 
-      {/* SECTION 2 — Purple bg — A Carefully Curated Selection */}
-      <section className='overflow-hidden bg-[#a791e3] px-6 py-20'>
-        <div className='mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2'>
-          {/* LEFT: stacked photos with coral stripe accents */}
-          <div className='relative h-[420px]'>
-            {/* Coral stripe bars behind photos */}
-            <div className='absolute left-0 right-0 top-0 h-20 rounded-xl bg-[#e7645b]' />
-            <div className='absolute left-0 right-0 top-24 h-20 rounded-xl bg-[#e7645b]' />
-            {/* Main photo with bg-removed person */}
+      <section className='relative bg-[#a791e3] overflow-hidden' style={{ minHeight: '680px' }}>
+        <div className='relative mx-auto' style={{ maxWidth: '1440px', minHeight: '680px' }}>
+          <div className='absolute' style={{ right: '100px', top: '-60px', width: '560px', height: '425px' }}>
+            <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '0', top: '180px', width: '473px', height: '88px' }} />
+            <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '60px', top: '270px', width: '563px', height: '88px' }} />
+            <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '210px', top: '0px', width: '474px', height: '88px' }} />
+            <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '180px', top: '280px', width: '474px', height: '88px' }} />
             <img
               src='/images/our-mission-15.jpg'
-              className='absolute bottom-0 left-0 right-0 mx-auto h-[380px] object-contain'
+              className='absolute object-contain'
+              style={{ left: '70px', top: '0', width: '559px', height: '372px' }}
               alt=''
             />
           </div>
 
-          {/* RIGHT: text content */}
-          <div>
-            <h2 className='mb-6 font-playfair text-5xl font-bold leading-tight text-white'>
+          <div className='absolute' style={{ left: '-100px', bottom: '0', width: '644px', height: '418px' }}>
+            <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '150px', bottom: '60px', width: '491px', height: '91px' }} />
+            <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '35px', bottom: '150px', width: '491px', height: '91px' }} />
+            <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '90px', bottom: '0', width: '490px', height: '91px' }} />
+            <img
+              src='/images/our-mission-16.jpg'
+              className='absolute object-contain'
+              style={{ left: '0', bottom: '0', width: '627px', height: '418px' }}
+              alt=''
+            />
+          </div>
+
+          <div className='relative z-10 flex flex-col items-center justify-center text-center px-6 py-20' style={{ minHeight: '680px' }}>
+            <h2 className='font-playfair text-5xl font-bold text-white leading-tight mb-6' style={{ maxWidth: '447px' }}>
               A Carefully
               <br />
               Curated
               <br />
               Selection
             </h2>
-            <p className='mb-8 font-poppins text-base leading-relaxed text-white/80'>
-              Every experience featured here is intentionally selected. We look beyond popularity and focus on quality — what makes an event feel engaging, welcoming, and genuinely enjoyable. This means fewer options, but better ones.
+            <p className='font-poppins text-white/80 text-lg leading-relaxed mb-8' style={{ maxWidth: '700px' }}>
+              Every experience featured here is intentionally selected. We look beyond popularity and focus on quality
+              — what makes an event feel engaging, welcoming, and genuinely enjoyable. This means fewer options, but
+              better ones.
             </p>
             <Link
               href='/events'
-              className='inline-flex items-center gap-2 rounded-full bg-[#1e1716] px-6 py-3 text-sm font-semibold text-white transition hover:bg-black'
+              className='inline-flex items-center gap-2 bg-[#1e1716] text-white rounded-full px-6 py-3 text-sm font-semibold hover:bg-black transition'
             >
               Explore Our Events →
             </Link>
           </div>
         </div>
-
-        {/* Friends badge */}
-        <div className='mx-auto mt-10 flex max-w-[1200px] items-center gap-2'>
-          <div className='flex items-center gap-2 rounded-full bg-white/20 px-4 py-2'>
-            <span className='font-poppins text-sm font-medium text-white'>Friends but Make it easy</span>
-          </div>
-        </div>
       </section>
 
-      {/* SECTION 3 — Warm bg — Connection Over Crowds */}
-      <section className='overflow-hidden bg-[#e3e2dd] px-6 py-20'>
-        <div className='mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2'>
-          {/* LEFT: stacked photo with decorative shapes */}
-          <div className='relative h-[420px]'>
-            <div className='absolute inset-4 rounded-[32px] bg-[#a791e3] rotate-3' />
-            <div className='absolute inset-6 rounded-[32px] bg-[#e7645b] -rotate-2' />
-            <img
-              src='/images/our-mission-17.jpg'
-              className='absolute inset-8 h-[calc(100%-64px)] w-[calc(100%-64px)] rounded-[24px] object-cover'
-              alt=''
-            />
-          </div>
-
-          {/* RIGHT: text */}
+      <section className='bg-[#e3e2dd] px-6 py-20 overflow-hidden'>
+        <div className='mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
           <div>
-            <h2 className='mb-6 font-playfair text-5xl font-bold leading-tight text-[#1e1716]'>
+            <h2 className='font-playfair text-5xl font-bold text-[#1e1716] leading-tight mb-6'>
               Connection
               <br />
               Over Crowds
             </h2>
-            <p className='mb-8 font-poppins text-base leading-relaxed text-[#666666]'>
-              We believe the best experiences are not defined by how many people attend, but by how they make you feel. That is why we prioritize environments that encourage natural interaction, ease, and a sense of belonging.
+            <p className='font-poppins text-[#666666] text-lg leading-relaxed mb-8'>
+              We believe the best experiences are not defined by how many people attend, but by how they make you feel.
+              That is why we prioritize environments that encourage natural interaction, ease, and a sense of belonging.
             </p>
             <Link
               href='/events'
-              className='inline-flex items-center gap-2 rounded-full bg-[#1e1716] px-6 py-3 text-sm font-semibold text-white transition hover:bg-black'
+              className='inline-flex items-center gap-2 bg-[#1e1716] text-white rounded-full px-6 py-3 text-sm font-semibold hover:bg-black transition'
             >
               Explore Our Events →
             </Link>
           </div>
+
+          <div className='relative' style={{ height: '512px' }}>
+            <div className='absolute rounded-[24px] bg-[#a791e3]' style={{ left: '0', bottom: '0', width: '506px', height: '424px' }} />
+            <div className='absolute rounded-[24px] bg-[#e7645b]' style={{ left: '80px', top: '0', width: '493px', height: '404px' }} />
+            <img
+              src='/images/our-mission-17.jpg'
+              className='absolute object-cover rounded-[20px]'
+              style={{ left: '75px', top: '80px', width: '440px', height: '329px' }}
+              alt=''
+            />
+          </div>
         </div>
       </section>
 
-      {/* SECTION 4 — Coral bg — Guided by Trust */}
-      <section className='overflow-hidden bg-[#e7645b] px-6 py-20'>
-        <div className='mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2'>
-          {/* LEFT: text */}
-          <div>
-            <h2 className='mb-6 font-playfair text-5xl font-bold leading-tight text-white'>
-              Guided by
-              <br />
-              Trust,
+      <section className='relative bg-[#e7645b] overflow-hidden' style={{ minHeight: '680px' }}>
+        <div className='relative mx-auto' style={{ maxWidth: '1440px', minHeight: '680px' }}>
+          <div className='absolute' style={{ left: '55px', top: '45px', width: '375px', height: '228px' }}>
+            <img
+              src='/images/our-mission-19.jpg'
+              className='absolute object-cover rounded-xl'
+              style={{ left: '3px', top: '55px', width: '292px', height: '173px' }}
+              alt=''
+            />
+            <img
+              src='/images/our-mission-20.jpg'
+              className='absolute object-cover rounded-xl'
+              style={{ left: '100px', top: '15px', width: '262px', height: '147px' }}
+              alt=''
+            />
+          </div>
+
+          <div className='absolute' style={{ right: '45px', bottom: '15px', width: '364px', height: '256px' }}>
+            <div className='absolute rounded-[16px] bg-white rotate-3' style={{ inset: '0' }} />
+            <img
+              src='/images/our-mission-18.jpg'
+              className='absolute object-cover rounded-[12px]'
+              style={{ left: '4px', top: '4px', width: '357px', height: '251px' }}
+              alt=''
+            />
+          </div>
+
+          <div className='relative z-10 flex flex-col items-center justify-center text-center px-6 py-20' style={{ minHeight: '680px' }}>
+            <h2 className='font-playfair text-5xl font-bold text-white leading-tight mb-6' style={{ maxWidth: '369px' }}>
+              Guided by Trust,
               <br />
               Not Trends
             </h2>
-            <p className='mb-8 font-poppins text-base leading-relaxed text-white/80'>
-              Our recommendations are built on thoughtful consideration, not algorithms alone. We aim to provide insight you can rely on — so when you choose something from here, you can feel confident in your decision.
+            <p className='font-poppins text-white/80 text-lg leading-relaxed mb-8' style={{ maxWidth: '700px' }}>
+              Our recommendations are built on thoughtful consideration, not algorithms alone. We aim to provide
+              insight you can rely on — so when you choose something from here, you can feel confident in your
+              decision.
             </p>
             <Link
               href='/contact'
-              className='inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1e1716] transition hover:bg-[#f6f6f6]'
+              className='inline-flex items-center gap-2 bg-white text-[#1e1716] rounded-full px-6 py-3 text-sm font-semibold hover:bg-[#f6f6f6] transition'
             >
               Contact Us →
             </Link>
-          </div>
-
-          {/* RIGHT: photo with white frame effect */}
-          <div className='relative'>
-            <div className='absolute -inset-4 rounded-[32px] bg-white rotate-3' />
-            <img
-              src='/images/our-mission-18.jpg'
-              className='relative h-[400px] w-full rounded-[24px] object-cover'
-              alt=''
-            />
           </div>
         </div>
       </section>
