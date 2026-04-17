@@ -11,7 +11,7 @@ export default function MissionPage() {
     <div>
       <section className='relative bg-[#1e1716] overflow-hidden' style={{ minHeight: '760px' }}>
         <div className='mx-auto max-w-[1440px] flex items-center relative' style={{ minHeight: '760px' }}>
-          <div className='relative z-10 px-24 py-24 max-w-[620px]'>
+          <div className='relative z-10 ml-auto px-24 py-24 max-w-[620px]'>
             <h1 className='font-playfair text-6xl font-bold text-white leading-tight mb-6'>Our Mission</h1>
             <p className='font-poppins text-lg text-white/70 leading-relaxed mb-10'>
               We are building a more thoughtful way to experience social life — one that values intention, comfort,
@@ -25,29 +25,29 @@ export default function MissionPage() {
             </Link>
           </div>
 
-          <div className='absolute right-0 top-0 bottom-0 w-[55%] overflow-hidden'>
+          <div className='absolute left-0 top-0 bottom-0 w-[55%] overflow-hidden'>
             <div
               className='absolute'
               style={{
-                right: '-60px',
+                left: '-60px',
                 top: '80px',
                 width: '764px',
                 height: '520px',
                 background: '#e7645b',
                 borderRadius: '32px',
-                transform: 'rotate(-3deg)',
+                transform: 'rotate(3deg)',
               }}
             />
             <div
               className='absolute'
               style={{
-                right: '-80px',
+                left: '-80px',
                 top: '40px',
                 width: '754px',
                 height: '502px',
                 background: '#a791e3',
                 borderRadius: '32px',
-                transform: 'rotate(-1deg)',
+                transform: 'rotate(1deg)',
               }}
             />
             <img
