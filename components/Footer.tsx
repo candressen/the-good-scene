@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { NAV_LINKS, SITE } from '@/lib/constants'
 
 const orderedLinks = ['Our Mission', 'Upcoming Events', 'Contact'].map(
