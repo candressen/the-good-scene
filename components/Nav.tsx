@@ -15,7 +15,7 @@ export default function Nav() {
 
   return (
     <nav className='fixed inset-x-0 top-0 z-50 border-b border-[#e3e2dd] bg-white font-poppins text-[#1e1716]'>
-      <div className='mx-auto flex max-w-[1200px] items-center justify-between px-6 py-3'>
+      <div className='mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6'>
         <Link href='/' className='flex items-center'>
           <Image
             src='/logos/logo.svg'
@@ -32,7 +32,7 @@ export default function Nav() {
             <Link
               key={link.label}
               href={link.href}
-              className='text-sm transition hover:text-[#A392DD]'
+              className='text-[18px] transition hover:text-[#A392DD]'
             >
               {link.label}
             </Link>
@@ -42,13 +42,13 @@ export default function Nav() {
         <div className='hidden items-center gap-3 md:flex'>
           <Link
             href='/events'
-            className='rounded-full bg-[#1e1716] px-5 py-2 text-sm font-medium text-white transition hover:bg-black'
+            className='rounded-full bg-[#1e1716] px-6 py-2.5 text-sm font-medium text-white transition hover:bg-black'
           >
             Get Started
           </Link>
           <Link
             href='/contact'
-            className='rounded-full border border-[#1e1716] px-5 py-2 text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white'
+            className='rounded-full border-2 border-[#1e1716] px-6 py-2.5 text-sm font-medium text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white'
           >
             Contact Us
           </Link>
@@ -77,7 +77,7 @@ export default function Nav() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className='text-sm text-[#1e1716] transition hover:text-[#A392DD]'
+                  className='text-[18px] text-[#1e1716] transition hover:text-[#A392DD]'
                 >
                   {link.label}
                 </Link>
@@ -87,14 +87,14 @@ export default function Nav() {
               <Link
                 href='/events'
                 onClick={() => setOpen(false)}
-                className='rounded-full bg-[#1e1716] px-5 py-2 text-center text-sm font-medium text-white transition hover:bg-black'
+                className='rounded-full bg-[#1e1716] px-6 py-2.5 text-center text-sm font-medium text-white transition hover:bg-black'
               >
                 Get Started
               </Link>
               <Link
                 href='/contact'
                 onClick={() => setOpen(false)}
-                className='rounded-full border border-[#1e1716] px-5 py-2 text-center text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white'
+                className='rounded-full border-2 border-[#1e1716] px-6 py-2.5 text-center text-sm font-medium text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white'
               >
                 Contact Us
               </Link>

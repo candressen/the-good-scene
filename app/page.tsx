@@ -54,72 +54,64 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20">
-        <h2 className="mb-12 text-center font-montserrat text-6xl font-black uppercase tracking-tight text-[#1e1716] md:text-8xl">
-          WEEKLY DROP
-        </h2>
-
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-3">
-          {events.slice(0, 6).map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
+      <section className="bg-[#f6f6f6]">
+        <div className='bg-[#1e1716] py-8 px-6 text-center'>
+          <h2 className='font-montserrat text-6xl md:text-8xl font-black text-white uppercase tracking-tight'>
+            Weekly Drop
+          </h2>
         </div>
 
-        <div className="mt-10 text-center">
-          <Link
-            href="/events"
-            className="inline-flex rounded-full border border-[#1e1716] px-8 py-2.5 text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white"
-          >
-            View More
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-[#f6f6f6] px-6 py-20">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2">
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              '/images/home-page-5.jpg',
-              '/images/home-page-6.jpg',
-              '/images/home-page-7.jpg',
-              '/images/home-page-8.jpg',
-            ].map((src, index) => (
-              <div key={src} className="h-48 overflow-hidden rounded-2xl">
-                <img
-                  src={src}
-                  alt={`Collage ${index + 1}`}
-                  className="h-full w-full object-cover"
-                />
-              </div>
+        <div className="px-6 py-20">
+          <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-3">
+            {events.slice(0, 6).map((event) => (
+              <EventCard key={event.id} event={event} />
             ))}
           </div>
 
-          <div>
-            <h2 className="mb-6 font-playfair text-3xl font-bold text-[#1e1716]">
-              What Makes Us Different
-            </h2>
-            <p className="whitespace-pre-line font-poppins text-base leading-relaxed text-[#666]">
-              We do things differently by focusing on what truly matters — not the number of
-              options, but the quality of each experience. Every event you see here has been
-              intentionally selected to stand out, so you can spend less time deciding and more
-              time enjoying.
-
-              Whether you are heading out alone or with others, the experience should feel easy and
-              welcoming.
-            </p>
+          <div className="mt-10 text-center">
+            <Link
+              href="/events"
+              className="inline-flex rounded-full border border-[#1e1716] px-8 py-2.5 text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white"
+            >
+              View More
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#1e1716] px-6 py-24">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2">
-          <h2 className="font-montserrat text-5xl font-black uppercase leading-[0.95] text-white md:text-7xl">
-            A More Thoughtful Way to Go Out
-          </h2>
-          <p className="font-poppins text-base leading-relaxed text-white/60">
-            Whether you are heading out alone or with others, the experience should feel easy and
-            welcoming.
-          </p>
+      <section className='relative overflow-hidden bg-[#1e1716] py-24 px-6'>
+        <div
+          className='pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-80'
+          style={{ background: 'radial-gradient(ellipse 80% 120% at 100% 50%, #e7645b 0%, transparent 60%)' }}
+        />
+
+        <div className='relative z-10 mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-16 md:grid-cols-2'>
+          <div>
+            <p className='mb-6 font-poppins text-sm uppercase tracking-widest text-white/50'>
+              What Makes Us Different
+            </p>
+            <h2 className='mb-8 font-montserrat text-5xl font-black uppercase leading-[0.92] text-white md:text-7xl'>
+              A More
+              <br />
+              Thoughtful
+              <br />
+              Way to
+              <br />
+              Go Out
+            </h2>
+            <p className='max-w-sm font-poppins text-base leading-relaxed text-white/60'>
+              We do things differently by focusing on what truly matters — not the number of
+              options, but the quality of each experience. Every event you see here has been
+              intentionally selected to stand out.
+            </p>
+          </div>
+
+          <div className='relative h-[500px] md:h-[600px]'>
+            <img src='/images/home-page-8.jpg' className='absolute top-0 right-0 h-44 w-64 rounded-2xl object-cover' alt='' />
+            <img src='/images/home-page-9.jpg' className='absolute top-32 left-0 h-36 w-52 rounded-2xl object-cover' alt='' />
+            <img src='/images/home-page-10.jpg' className='absolute bottom-16 right-8 h-40 w-56 rounded-2xl object-cover' alt='' />
+            <img src='/images/home-page-7.jpg' className='absolute bottom-0 left-4 h-32 w-44 rounded-2xl object-cover' alt='' />
+          </div>
         </div>
       </section>
 
