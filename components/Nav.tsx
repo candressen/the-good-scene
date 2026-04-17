@@ -3,32 +3,55 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { NAV_LINKS, SITE } from '@/lib/constants'
 
-const orderedLinks = ['Our Mission', 'Upcoming Events', 'Contact'].map(
-  label => NAV_LINKS.find(link => link.label === label)!
-)
+const navLinks = [
+  { label: 'Our Mission', href: '/mission' },
+  { label: 'Upcoming Events', href: '/events' },
+  { label: 'Contact', href: '/contact' },
+]
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className='fixed inset-x-0 top-0 z-50 border-b border-[#e3e2dd] bg-white font-poppins text-[18px] text-[#1e1716]'>
-      <div className='mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4'>
-        <Link href='/' className='font-playfair text-xl font-bold tracking-tight text-[#1e1716]'>
-          {SITE.name}
+    <nav className='fixed inset-x-0 top-0 z-50 border-b border-[#e3e2dd] bg-white font-poppins text-[#1e1716]'>
+      <div className='mx-auto flex max-w-[1200px] items-center justify-between px-6 py-3'>
+        <Link href='/' className='flex items-center'>
+          <Image
+            src='/logos/logo.svg'
+            alt='The Good Scene'
+            width={160}
+            height={48}
+            className='h-12 w-auto'
+            priority
+          />
         </Link>
 
         <div className='hidden items-center gap-8 md:flex'>
-          {orderedLinks.map(link => (
+          {navLinks.map(link => (
             <Link
               key={link.label}
               href={link.href}
-              className='transition hover:text-[#A392DD]'
+              className='text-sm transition hover:text-[#A392DD]'
             >
               {link.label}
             </Link>
           ))}
+        </div>
+
+        <div className='hidden items-center gap-3 md:flex'>
+          <Link
+            href='/events'
+            className='rounded-full bg-[#1e1716] px-5 py-2 text-sm font-medium text-white transition hover:bg-black'
+          >
+            Get Started
+          </Link>
+          <Link
+            href='/contact'
+            className='rounded-full border border-[#1e1716] px-5 py-2 text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white'
+          >
+            Contact Us
+          </Link>
         </div>
 
         <button
@@ -47,16 +70,36 @@ export default function Nav() {
 
       {open && (
         <div id='mobile-nav' className='border-t border-[#e3e2dd] bg-white px-6 py-4 md:hidden'>
-          {orderedLinks.map(link => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className='block py-3 text-[#1e1716] transition hover:text-[#A392DD]'
-            >
-              {link.label}
-            </Link>
-          ))}
+          <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-3'>
+              {navLinks.map(link => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className='text-sm text-[#1e1716] transition hover:text-[#A392DD]'
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <div className='flex flex-col gap-3 pt-2'>
+              <Link
+                href='/events'
+                onClick={() => setOpen(false)}
+                className='rounded-full bg-[#1e1716] px-5 py-2 text-center text-sm font-medium text-white transition hover:bg-black'
+              >
+                Get Started
+              </Link>
+              <Link
+                href='/contact'
+                onClick={() => setOpen(false)}
+                className='rounded-full border border-[#1e1716] px-5 py-2 text-center text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white'
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </nav>

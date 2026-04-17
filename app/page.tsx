@@ -1,175 +1,165 @@
 import Link from 'next/link'
 import { getAllEvents } from '@/lib/airtable'
-import type { Event } from '@/lib/airtable'
 
-function EventCard({ event }: { event: Event }) {
+function EventCard({ event }: { event: Awaited<ReturnType<typeof getAllEvents>>[number] }) {
+  const image = event.images[0]?.url || '/images/home-page-2.jpg'
+
   return (
-    <article className="overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md">
+    <Link
+      href="/events"
+      className="group overflow-hidden rounded-2xl border border-[#e3e2dd] bg-white transition hover:shadow-lg"
+    >
       <div className="h-48 w-full bg-[#e3e2dd]">
-        {event.images[0] ? (
-          <img
-            src={event.images[0].url}
-            alt={event.images[0].filename || event.name}
-            className="h-full w-full object-cover"
-          />
-        ) : null}
+        <img src={image} alt={event.name} className="h-full w-full object-cover" />
       </div>
-      <div className="p-6">
-        <div className="mb-3 flex flex-wrap gap-2">
-          {(event.tags?.length ? event.tags : ['Curated']).map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-[#A392DD]/10 px-3 py-1 text-xs text-[#A392DD]"
-            >
-              {tag}
-            </span>
-          ))}
+      <div className="p-5">
+        <div className="mb-2 flex items-center gap-2 text-xs text-[#999]">
+          <span>{event.date}</span>
+          <span>•</span>
+          <span>{event.location}</span>
         </div>
-        <h3 className="mb-2 font-playfair text-xl font-semibold text-[#1e1716]">{event.name}</h3>
-        <p className="mb-3 text-sm text-[#666666]">
-          {event.date}
-          {event.location ? ` · ${event.location}` : ''}
-        </p>
-        <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-[#666666]">
-          {event.description}
-        </p>
-        <Link href="/events" className="text-sm font-medium text-[#A392DD] hover:underline">
-          Read More
-        </Link>
+        <h3 className="mb-1 font-playfair text-lg font-semibold text-[#1e1716]">
+          {event.name}
+        </h3>
+        <p className="mb-3 line-clamp-2 text-sm text-[#666]">{event.description}</p>
+        <span className="text-sm font-medium text-[#A392DD]">Read More</span>
       </div>
-    </article>
+    </Link>
   )
 }
 
-function SkeletonCard() {
-  return (
-    <article className="overflow-hidden rounded-2xl bg-white shadow-sm">
-      <div className="h-48 w-full animate-pulse bg-[#e3e2dd]" />
-      <div className="p-6">
-        <div className="mb-3 flex gap-2">
-          <div className="h-6 w-20 animate-pulse rounded-full bg-[#e3e2dd]" />
-          <div className="h-6 w-16 animate-pulse rounded-full bg-[#e3e2dd]" />
-        </div>
-        <div className="mb-3 h-7 w-3/4 animate-pulse rounded bg-[#e3e2dd]" />
-        <div className="mb-3 h-4 w-1/2 animate-pulse rounded bg-[#e3e2dd]" />
-        <div className="mb-2 h-4 w-full animate-pulse rounded bg-[#e3e2dd]" />
-        <div className="mb-4 h-4 w-5/6 animate-pulse rounded bg-[#e3e2dd]" />
-        <div className="h-4 w-24 animate-pulse rounded bg-[#e3e2dd]" />
-      </div>
-    </article>
-  )
-}
-
-export default async function Home() {
+export default async function HomePage() {
   const events = await getAllEvents()
-  const featuredEvents = events.slice(0, 3)
-  const showPlaceholders = featuredEvents.length === 0
 
   return (
-    <div className="bg-[#f6f6f6] font-poppins text-[#1e1716]">
-      <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#1e1716] px-6">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,146,221,0.18),transparent_38%),linear-gradient(180deg,rgba(30,23,22,0.35),rgba(30,23,22,0.85))]" />
-        <div className="relative mx-auto max-w-4xl text-center">
-          <span className="mb-6 inline-flex rounded-full border border-[#A392DD]/30 bg-[#A392DD]/10 px-3 py-1 text-xs font-medium text-[#A392DD]">
-            Boston, MA
-          </span>
-          <h1 className="mb-6 font-playfair text-5xl font-bold leading-tight text-white md:text-7xl">
-            Step Into the Right Scene
+    <div>
+      <section
+        className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden bg-cover bg-center px-6"
+        style={{ backgroundImage: "url('/images/home-page-1.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <h1 className="font-playfair text-5xl font-bold leading-tight text-white md:text-7xl">
+            Step Into the <em className="italic text-white">Right</em> Scene
           </h1>
-          <p className="mx-auto mb-10 max-w-xl text-lg text-white/70">
-            Skip the noise and explore a curated collection of events that prioritize quality,
-            atmosphere, and genuine connection.
+          <p className="mx-auto mt-4 mb-8 max-w-xl text-lg text-white/80 font-poppins">
+            Discover curated experiences designed to help you find the right scene.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/events" className="rounded-full bg-[#A392DD] px-8 py-3 text-white">
-              Explore Events
-            </Link>
-            <Link
-              href="/mission"
-              className="rounded-full border border-white/30 px-8 py-3 text-white/80"
-            >
-              Our Mission
-            </Link>
-          </div>
+          <Link
+            href="/events"
+            className="inline-flex rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#1e1716] transition hover:bg-[#f6f6f6]"
+          >
+            Explore Now →
+          </Link>
         </div>
       </section>
 
-      <section className="bg-[#e3e2dd] px-6 py-20">
-        <p className="mb-3 text-center text-xs uppercase tracking-[0.3em] text-[#666666]">
-          Weekly Drop
-        </p>
-        <h2 className="mb-12 text-center font-playfair text-4xl font-bold text-[#1e1716]">
-          This Week&apos;s Selection
+      <section className="bg-white px-6 py-20">
+        <h2 className="mb-12 text-center font-montserrat text-6xl font-black uppercase tracking-tight text-[#1e1716] md:text-8xl">
+          WEEKLY DROP
         </h2>
 
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 md:grid-cols-3">
-          {showPlaceholders
-            ? Array.from({ length: 3 }).map((_, index) => <SkeletonCard key={index} />)
-            : featuredEvents.map((event) => <EventCard key={event.id} event={event} />)}
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-3">
+          {events.slice(0, 6).map((event) => (
+            <EventCard key={event.id} event={event} />
+          ))}
         </div>
 
         <div className="mt-10 text-center">
-          <Link href="/events" className="text-sm font-medium text-[#A392DD] hover:underline">
-            View All Events
+          <Link
+            href="/events"
+            className="inline-flex rounded-full border border-[#1e1716] px-8 py-2.5 text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white"
+          >
+            View More
           </Link>
         </div>
       </section>
 
       <section className="bg-[#f6f6f6] px-6 py-20">
-        <h2 className="mx-auto mb-6 max-w-[800px] text-center font-playfair text-4xl font-bold text-[#1e1716]">
-          What Makes Us Different
-        </h2>
-        <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed text-[#666666]">
-          We do things differently by focusing on what truly matters — not the number of options,
-          but the quality of each experience. Every event you see here has been intentionally
-          selected to stand out.
-        </p>
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              '/images/home-page-5.jpg',
+              '/images/home-page-6.jpg',
+              '/images/home-page-7.jpg',
+              '/images/home-page-8.jpg',
+            ].map((src, index) => (
+              <div key={src} className="h-48 overflow-hidden rounded-2xl">
+                <img
+                  src={src}
+                  alt={`Collage ${index + 1}`}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
 
-        <div className="mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-8 md:grid-cols-3">
-          <article className="rounded-2xl border border-[#e3e2dd] bg-white p-8">
-            <h3 className="mb-3 font-playfair text-xl font-semibold text-[#1e1716]">
-              Carefully Curated
-            </h3>
-            <p className="text-sm leading-relaxed text-[#666666]">
-              Every event is intentionally selected. We look beyond popularity.
+          <div>
+            <h2 className="mb-6 font-playfair text-3xl font-bold text-[#1e1716]">
+              What Makes Us Different
+            </h2>
+            <p className="whitespace-pre-line font-poppins text-base leading-relaxed text-[#666]">
+              We do things differently by focusing on what truly matters — not the number of
+              options, but the quality of each experience. Every event you see here has been
+              intentionally selected to stand out, so you can spend less time deciding and more
+              time enjoying.
+
+              Whether you are heading out alone or with others, the experience should feel easy and
+              welcoming.
             </p>
-          </article>
-          <article className="rounded-2xl border border-[#e3e2dd] bg-white p-8">
-            <h3 className="mb-3 font-playfair text-xl font-semibold text-[#1e1716]">
-              Connection Over Crowds
-            </h3>
-            <p className="text-sm leading-relaxed text-[#666666]">
-              The best experiences are defined by who you meet, not how many.
-            </p>
-          </article>
-          <article className="rounded-2xl border border-[#e3e2dd] bg-white p-8">
-            <h3 className="mb-3 font-playfair text-xl font-semibold text-[#1e1716]">
-              Guided by Trust
-            </h3>
-            <p className="text-sm leading-relaxed text-[#666666]">
-              Our recommendations are built on thoughtful consideration, not algorithms.
-            </p>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section className="bg-[#1e1716] px-6 py-20 text-center">
-        <h2 className="mb-4 font-playfair text-4xl font-bold text-white">Be Part of the Scene</h2>
-        <p className="mb-4 text-xl text-white/70">Are You Hosting Something Worth Experiencing?</p>
-        <p className="mx-auto mb-10 max-w-xl text-sm text-white/50">
-          We&apos;re always looking for standout events. Submit your event for consideration and
-          become part of a carefully curated social experience.
-        </p>
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link href="/submit" className="rounded-full bg-[#A392DD] px-8 py-3 text-white">
-            Submit Your Event
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded-full border border-white/30 px-8 py-3 text-white/80"
-          >
-            Contact Us
-          </Link>
+      <section className="bg-[#1e1716] px-6 py-24">
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <h2 className="font-montserrat text-5xl font-black uppercase leading-[0.95] text-white md:text-7xl">
+            A More Thoughtful Way to Go Out
+          </h2>
+          <p className="font-poppins text-base leading-relaxed text-white/60">
+            Whether you are heading out alone or with others, the experience should feel easy and
+            welcoming.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-[#f6f6f6] px-6 py-20">
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <div>
+            <h2 className="mb-2 font-playfair text-3xl font-bold italic text-[#1e1716]">
+              Be <em className="italic">Part</em> Of The Scene
+            </h2>
+            <p className="mb-3 font-poppins text-lg font-semibold text-[#1e1716]">
+              Are You Hosting Something Worth Experiencing?
+            </p>
+            <p className="mb-8 text-sm text-[#666]">
+              We are always looking for standout events that bring people together in the right
+              way. Submit your event for consideration and become part of a carefully curated
+              social experience.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/submit"
+                className="rounded-full bg-[#1e1716] px-6 py-3 text-sm font-medium text-white transition hover:bg-black"
+              >
+                Submit Your Proposal
+              </Link>
+              <Link
+                href="/contact"
+                className="rounded-full border border-[#1e1716] px-6 py-3 text-sm text-[#1e1716] transition hover:bg-[#1e1716] hover:text-white"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="/images/home-page-12.jpg"
+              alt="Be part of the scene"
+              className="h-[400px] w-full rounded-2xl object-cover"
+            />
+          </div>
         </div>
       </section>
     </div>
