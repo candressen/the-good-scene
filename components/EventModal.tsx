@@ -77,6 +77,10 @@ export default function EventModal({ event, onClose }: Props) {
             </button>
           </div>
 
+          <div className='flex items-center justify-center py-3 border-b border-[#f0efea]'>
+            <img src='/logos/logo.svg' alt='The Good Scene' className='h-6 w-auto' />
+          </div>
+
           <div className="p-6">
             <h2 className="font-playfair text-2xl font-bold italic text-[#1e1716]">
               {event.name}
@@ -122,7 +126,7 @@ export default function EventModal({ event, onClose }: Props) {
             ) : null}
           </div>
 
-          <div className="sticky bottom-0 border-t border-[#e3e2dd] bg-white px-6 py-4">
+          <div className="sticky bottom-0 z-10 border-t border-[#e3e2dd] bg-white px-6 py-4">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-2">
                 <div className="flex items-center">

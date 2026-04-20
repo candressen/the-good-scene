@@ -57,7 +57,7 @@ export default async function HomePage() {
       <section className="bg-[#f6f6f6]">
         <div className='bg-[#1e1716] py-8 px-6 text-center'>
           <h2 className='font-montserrat text-6xl md:text-8xl font-black text-white uppercase tracking-tight'>
-            Weekly Drop
+            Weekly Highlights
           </h2>
         </div>
 
@@ -79,38 +79,47 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className='relative overflow-hidden bg-[#1e1716] py-24 px-6'>
-        <div
-          className='pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-80'
-          style={{ background: 'radial-gradient(ellipse 80% 120% at 100% 50%, #e7645b 0%, transparent 60%)' }}
-        />
-
-        <div className='relative z-10 mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-16 md:grid-cols-2'>
+      <section className='bg-[#e3e2dd] py-20 px-6'>
+        <div className='mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-16 md:grid-cols-2'>
+          <div className='grid grid-cols-2 gap-4'>
+            <img
+              src='/images/home-page-5.jpg'
+              className='h-56 w-full rounded-2xl object-cover'
+              alt=''
+            />
+            <img
+              src='/images/home-page-6.jpg'
+              className='mt-8 h-56 w-full rounded-2xl object-cover'
+              alt=''
+            />
+            <img
+              src='/images/home-page-7.jpg'
+              className='h-56 w-full rounded-2xl object-cover'
+              alt=''
+            />
+            <img
+              src='/images/home-page-8.jpg'
+              className='mt-8 h-56 w-full rounded-2xl object-cover'
+              alt=''
+            />
+          </div>
           <div>
-            <p className='mb-6 font-poppins text-sm uppercase tracking-widest text-white/50'>
+            <p className='mb-4 font-poppins text-xs uppercase tracking-[0.3em] text-[#A392DD]'>
               What Makes Us Different
             </p>
-            <h2 className='mb-8 font-montserrat text-5xl font-black uppercase leading-[0.92] text-white md:text-7xl'>
-              A More
-              <br />
-              Thoughtful
-              <br />
-              Way to
-              <br />
-              Go Out
+            <h2 className='mb-6 font-playfair text-4xl font-bold text-[#1e1716]'>
+              A More Thoughtful Way to Go Out
             </h2>
-            <p className='max-w-sm font-poppins text-base leading-relaxed text-white/60'>
+            <p className='mb-6 font-poppins text-base leading-relaxed text-[#666]'>
               We do things differently by focusing on what truly matters — not the number of
               options, but the quality of each experience. Every event you see here has been
               intentionally selected to stand out.
             </p>
-          </div>
-
-          <div className='relative h-[500px] md:h-[600px]'>
-            <img src='/images/home-page-8.jpg' className='absolute top-0 right-0 h-44 w-64 rounded-2xl object-cover' alt='' />
-            <img src='/images/home-page-9.jpg' className='absolute top-32 left-0 h-36 w-52 rounded-2xl object-cover' alt='' />
-            <img src='/images/home-page-10.jpg' className='absolute bottom-16 right-8 h-40 w-56 rounded-2xl object-cover' alt='' />
-            <img src='/images/home-page-7.jpg' className='absolute bottom-0 left-4 h-32 w-44 rounded-2xl object-cover' alt='' />
+            <p className='font-poppins text-base leading-relaxed text-[#666]'>
+              Whether you are heading out alone or with others, the experience should feel easy
+              and welcoming. Our goal is to remove uncertainty and make it simpler to step into
+              social settings with confidence.
+            </p>
           </div>
         </div>
       </section>
@@ -145,12 +154,20 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div>
-            <img
-              src="/images/home-page-12.jpg"
-              alt="Be part of the scene"
-              className="h-[400px] w-full rounded-2xl object-cover"
-            />
+          <div className='relative'>
+            <div className='rounded-3xl bg-white p-4 shadow-sm'>
+              <img
+                src='/images/home-page-12.jpg'
+                className='h-[380px] w-full rounded-2xl object-cover'
+                alt=''
+              />
+            </div>
+            <div className='absolute -bottom-4 -left-4 flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-md'>
+              <span className='text-lg'>👥</span>
+              <span className='font-poppins text-sm font-medium text-[#1e1716]'>
+                Make New Friends
+              </span>
+            </div>
           </div>
         </div>
       </section>
