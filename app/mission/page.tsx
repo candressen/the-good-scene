@@ -51,7 +51,7 @@ export default function MissionPage() {
               }}
             />
             <img
-              src='/images/our-mission-14.jpg'
+              src='/images/fabiana/photo-1529903384028-929ae5dccdf1.avif'
               className='absolute object-cover rounded-[24px]'
               style={{ right: '-40px', top: '60px', width: '703px', height: '475px' }}
               alt=''

@@ -15,7 +15,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className='fixed inset-x-0 top-0 z-50 border-b border-[#e3e2dd] bg-white font-poppins text-[#1e1716]'>
+    <nav className='fixed inset-x-0 top-0 z-50 border-b border-[#e3e2dd] bg-white font-poppins text-[#1e1716] shadow-sm'>
       <div className='mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6'>
         <Link href='/' className='flex items-center'>
           <Image
@@ -23,7 +23,7 @@ export default function Nav() {
             alt='The Good Scene'
             width={160}
             height={48}
-            className='h-12 w-auto'
+            className='h-10 w-auto'
             priority
           />
         </Link>

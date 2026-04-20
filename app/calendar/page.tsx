@@ -42,7 +42,7 @@ export default function CalendarPage() {
     <div className="min-h-screen bg-[#e3e2dd]">
       {/* Page header */}
       <div className="px-6 pt-14 pb-8 text-center">
-        <h1 className="font-playfair text-5xl font-bold italic text-[#1e1716]">Calendar</h1>
+        <h1 className="font-playfair text-5xl font-bold text-[#1e1716]">Calendar</h1>
       </div>
 
       {/* Calendar + Events panel */}
