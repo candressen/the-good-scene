@@ -43,7 +43,7 @@ export default async function HomePage() {
             Not every event makes The Good Scene
           </h1>
           <p className="mx-auto mt-4 mb-8 max-w-xl text-lg text-white/80 font-poppins">
-            Discover curated experiences designed to help you find the right scene.
+            Go out with confidence. Every experience is selected to feel right from the moment you arrive.
           </p>
           <Link
             href="/events"
