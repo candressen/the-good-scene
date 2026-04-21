@@ -14,7 +14,7 @@ export default function Footer() {
       <div className='mx-auto max-w-[1200px] px-6 py-16'>
         <div className='grid grid-cols-1 gap-12 md:grid-cols-3'>
           <div>
-            <p className='mb-4 font-playfair text-2xl font-bold'>{SITE.name}</p>
+            <Image src='/logos/logo.svg' alt='The Good Scene' width={160} height={48} className='mb-4 h-10 w-auto brightness-0 invert' />
             <p className='mb-6 max-w-sm text-sm leading-relaxed text-white/60'>
               Send your email to receive our newsletters and stay up to date with new events.
             </p>
