@@ -23,7 +23,7 @@ export default function Nav() {
             alt='The Good Scene'
             width={160}
             height={48}
-            className='h-9 w-auto'
+            className='h-9 w-auto brightness-0 invert'
             priority
           />
         </Link>
