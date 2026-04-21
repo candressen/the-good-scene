@@ -56,7 +56,7 @@ export default async function HomePage() {
 
       <section className="bg-[#f6f6f6]">
         <div className='bg-[#1e1716] py-8 px-6 text-center'>
-          <h2 className='font-dela text-6xl md:text-8xl uppercase tracking-tight text-white'>
+          <h2 className='font-dela text-3xl md:text-4xl uppercase tracking-tight text-white'>
             Weekly Highlights
           </h2>
         </div>
