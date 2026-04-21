@@ -16,14 +16,14 @@ export default function Nav() {
 
   return (
     <nav className='fixed inset-x-0 top-0 z-50 px-6 pt-4 font-poppins text-[#1e1716]'>
-      <div className='mx-auto flex h-20 max-w-[1200px] items-center justify-between rounded-2xl bg-white px-6 shadow-sm border border-[#e3e2dd]'>
+      <div className='mx-auto flex h-24 max-w-[1200px] items-center justify-between rounded-2xl bg-white px-6 shadow-sm border border-[#e3e2dd]'>
         <Link href='/' className='flex items-center'>
           <Image
             src='/logos/logo.svg'
             alt='The Good Scene'
             width={160}
             height={48}
-            className='h-9 w-auto brightness-0 invert'
+            className='h-16 w-auto brightness-0 invert'
             priority
           />
         </Link>
