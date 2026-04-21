@@ -34,11 +34,11 @@ export default async function HomePage() {
   return (
     <div>
       <section
-        className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden bg-cover bg-center px-6"
+        className="relative min-h-screen overflow-hidden bg-cover bg-center px-6"
         style={{ backgroundImage: "url('/images/home-page-1.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 mx-auto max-w-4xl text-center">
+        <div className="relative z-10 mx-auto max-w-4xl pt-32 text-center md:pt-40">
           <h1 className="font-playfair text-5xl font-bold leading-tight text-white md:text-7xl">
             Not every event makes The Good Scene
           </h1>
