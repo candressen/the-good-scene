@@ -40,7 +40,7 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h1 className="font-playfair text-5xl font-bold leading-tight text-white md:text-7xl">
-            Step Into the <em className="italic text-white">Right</em> Scene
+            Not every event makes The Good Scene
           </h1>
           <p className="mx-auto mt-4 mb-8 max-w-xl text-lg text-white/80 font-poppins">
             Discover curated experiences designed to help you find the right scene.
