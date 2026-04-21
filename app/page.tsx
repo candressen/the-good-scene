@@ -40,7 +40,7 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto max-w-4xl pt-32 text-center md:pt-40">
           <h1 className="font-playfair text-5xl font-bold leading-tight text-white md:text-7xl">
-            Not every event makes The Good Scene
+            Not every event makes <span className="block whitespace-nowrap">The Good Scene</span>
           </h1>
           <p className="mx-auto mt-4 mb-8 max-w-xl text-lg text-white/80 font-poppins">
             Go out with confidence. Every experience is selected to feel right from the moment you arrive.
@@ -56,7 +56,7 @@ export default async function HomePage() {
 
       <section className="bg-[#f6f6f6]">
         <div className='bg-[#1e1716] py-8 px-6 text-center'>
-          <h2 className='font-montserrat text-6xl md:text-8xl font-black text-white uppercase tracking-tight'>
+          <h2 className='font-dela text-6xl md:text-8xl uppercase tracking-tight text-[#1e1716]'>
             Weekly Highlights
           </h2>
         </div>
