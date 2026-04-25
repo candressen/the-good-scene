@@ -1,19 +1,16 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Header from "@/components/locofy-header";
 import FrameComponent from "@/components/frame-component";
 import EventHighlights from "@/components/event-highlights";
 import BgDesign from "@/components/bg-design";
 import FrameComponent11 from "@/components/frame-component1";
-import Footer from "@/components/locofy-footer";
 
 const HomePage: NextPage = () => {
   return (
     <div className="w-full relative shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-background overflow-hidden flex flex-col items-start isolate gap-[118px] leading-[normal] tracking-[normal] mq750:gap-[59px] mq450:gap-[29px]">
       <section className="self-stretch flex flex-col items-start gap-[25px] max-w-full">
         <div className="self-stretch flex flex-col items-start pt-0 px-[30px] pb-[248px] box-border gap-[197px] bg-[url('/Hero-Section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq750:gap-[98px] mq450:gap-[49px] mq450:pb-[105px] mq450:box-border mq1100:pb-[161px] mq1100:box-border">
-          <Header />
-          <FrameComponent />
+              <FrameComponent />
         </div>
         <EventHighlights />
       </section>
@@ -30,7 +27,6 @@ const HomePage: NextPage = () => {
         alt=""
         src="/streamline-color-ai-network-spark1@2x.png"
       />
-      <Footer />
     </div>
   );
 };
