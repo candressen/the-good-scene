@@ -58,12 +58,10 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <div className="relative font-medium">Quick Links</div>
                 <div className="w-20 h-0.5 relative bg-white" />
               </div>
-              <div className="self-stretch relative">Our Mission</div>
-              <div className="self-stretch relative">Lorem</div>
-              <div className="self-stretch relative">Portal</div>
-              <div className="self-stretch h-5 relative flex items-center shrink-0">
-                Estimate
-              </div>
+              <a href="/mission" className="self-stretch relative hover:underline">Our Mission</a>
+              <a href="/events" className="self-stretch relative hover:underline">Upcoming Events</a>
+              <a href="/calendar" className="self-stretch relative hover:underline">Calendar</a>
+              <a href="/contact" className="self-stretch h-5 relative flex items-center shrink-0 hover:underline">Contact</a>
             </div>
             <div className="h-[195px] flex flex-col items-start gap-6">
               <div className="self-stretch flex flex-col items-start gap-1.5 text-lg">
@@ -81,7 +79,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/mail.svg"
                 />
                 <div className="h-5 w-[184.7px] relative flex items-center">
-                  mail@example.com
+                  hellothegoodscene@outlook.com
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -95,7 +93,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/phone-in-talk.svg"
                 />
                 <div className="h-5 w-[184.7px] relative flex items-center">
-                  (281) 222-2222
+                  (617) 959-9138
                 </div>
               </div>
               <div className="flex items-center gap-[11.7px]">
@@ -109,9 +107,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/location-on.svg"
                 />
                 <div className="relative">
-                  Lorem Ipsum third floor
-                  <br />
-                  Tx, Houstan
+                  Boston, MA
                 </div>
               </div>
             </div>
@@ -123,18 +119,18 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <div className="w-20 h-0.5 relative bg-white" />
               </div>
               <div className="flex flex-col items-start text-subtext">
-                <div className="w-[366px] rounded-lg bg-white flex items-center py-1 pl-6 pr-1 box-border gap-2.5">
-                  <div className="h-5 flex-1 overflow-hidden flex items-start">
-                    <div className="mt-[-2px] h-6 w-[130px] relative inline-block shrink-0">
-                      Enter your email
-                    </div>
-                  </div>
-                  <button className="cursor-pointer border-[#2d2828] border-solid border-[1px] py-1.5 px-[19px] bg-[#2d2828] rounded-lg flex items-center justify-center hover:bg-[#524a4a] hover:border-[#524a4a] hover:border-solid hover:hover:border-[1px] hover:box-border">
+                <form className="w-[366px] rounded-lg bg-white flex items-center py-1 pl-4 pr-1 box-border gap-2.5" onSubmit={(e) => e.preventDefault()}>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="h-8 flex-1 outline-none text-sm text-gray-600 bg-transparent"
+                  />
+                  <button type="submit" className="cursor-pointer border-[#2d2828] border-solid border-[1px] py-1.5 px-[19px] bg-[#2d2828] rounded-lg flex items-center justify-center hover:bg-[#524a4a]">
                     <div className="relative text-base font-medium font-[Poppins] text-white text-center">
                       Subscribe
                     </div>
                   </button>
-                </div>
+                </form>
               </div>
               <div className="self-stretch h-[52px] flex items-start pt-0.5 pb-0 px-0 box-border">
                 <div className="h-[72px] w-[366px] relative flex items-center shrink-0">
