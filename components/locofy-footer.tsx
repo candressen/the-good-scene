@@ -52,7 +52,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               </div>
             </div>
           </div>
-          <div className="flex items-start gap-[60px] max-w-full mq450:gap-[25px] mq1100:gap-[40px] mq1100:flex-wrap">
+          <div className="flex items-start gap-[40px] max-w-full mq450:gap-[25px] mq1100:gap-[30px] mq1100:flex-wrap">
             <div className="self-stretch flex flex-col items-start gap-[21px]">
               <div className="self-stretch flex flex-col items-start gap-1.5 text-lg">
                 <div className="relative font-medium">Quick Links</div>
