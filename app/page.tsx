@@ -9,8 +9,12 @@ const HomePage: NextPage = () => {
   return (
     <div className="w-full relative shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-background overflow-hidden flex flex-col items-start isolate gap-[118px] leading-[normal] tracking-[normal] mq750:gap-[59px] mq450:gap-[29px]">
       <section className="self-stretch flex flex-col items-start gap-[25px] max-w-full">
-        <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-0 box-border min-h-[600px] bg-[url('/Hero-Section@3x.png')] bg-cover bg-no-repeat bg-center max-w-full">
+        <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-0 box-border max-w-full relative overflow-hidden"
+          style={{ minHeight: '600px', backgroundImage: 'url(/hero-section.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+          <div className="absolute inset-0 bg-black/40 z-[0]" />
+          <div className="relative z-[1] w-full">
               <FrameComponent />
+          </div>
         </div>
         <EventHighlights />
       </section>
