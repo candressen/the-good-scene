@@ -20,7 +20,7 @@ const BgDesign: NextPage<BgDesignType> = ({ className = "" }) => {
         src="/streamline-color-ai-network-spark@2x.png"
       />
       <Image
-        className="w-full h-[1529px] absolute !!m-[0 important] top-[0px] right-[0px] left-[0px] max-w-full overflow-hidden shrink-0 z-[0] pointer-events-none"
+        className="w-screen h-[1529px] absolute !!m-[0 important] top-[0px] left-[50%] -translate-x-1/2 overflow-hidden shrink-0 z-[0] pointer-events-none"
         width={1440}
         height={1529}
         sizes="100vw"
