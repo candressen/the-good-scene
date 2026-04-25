@@ -63,7 +63,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               <a href="/calendar" className="self-stretch relative hover:underline">Calendar</a>
               <a href="/contact" className="self-stretch h-5 relative flex items-center shrink-0 hover:underline">Contact</a>
             </div>
-            <div className="h-[195px] flex flex-col items-start gap-6">
+            <div className="flex flex-col items-start gap-6 min-w-[220px]">
               <div className="self-stretch flex flex-col items-start gap-1.5 text-lg">
                 <div className="relative font-medium">Contact Info</div>
                 <div className="w-20 h-0.5 relative bg-white" />
@@ -78,7 +78,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   alt=""
                   src="/mail.svg"
                 />
-                <div className="h-5 w-[184.7px] relative flex items-center">
+                <div className="relative flex items-center flex-wrap break-all text-sm">
                   hellothegoodscene@outlook.com
                 </div>
               </div>
@@ -92,7 +92,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   alt=""
                   src="/phone-in-talk.svg"
                 />
-                <div className="h-5 w-[184.7px] relative flex items-center">
+                <div className="relative flex items-center">
                   (617) 959-9138
                 </div>
               </div>
