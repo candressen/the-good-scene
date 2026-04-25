@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer'
+import LocofyFooter from '@/components/locofy-footer'
 import type { Metadata } from 'next'
 import FilteredEvents from '@/components/FilteredEvents'
 import { getAllEvents } from '@/lib/airtable'
@@ -55,6 +55,7 @@ export default async function EventsPage() {
           )}
         </div>
       </section>
+      <LocofyFooter />
     </div>
   )
 }

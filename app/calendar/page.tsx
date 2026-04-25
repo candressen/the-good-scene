@@ -1,6 +1,6 @@
 'use client'
 
-import Footer from '@/components/Footer'
+import LocofyFooter from '@/components/locofy-footer'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import type { Event } from '@/lib/airtable'
@@ -179,6 +179,7 @@ export default function CalendarPage() {
           ))}
         </div>
       </div>
+      <LocofyFooter />
     </div>
   )
 }

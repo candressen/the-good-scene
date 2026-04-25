@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer'
+import LocofyFooter from '@/components/locofy-footer'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -191,6 +191,7 @@ export default function MissionPage() {
           </div>
         </div>
       </section>
+      <LocofyFooter />
     </div>
   )
 }

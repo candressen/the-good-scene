@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer'
+import LocofyFooter from '@/components/locofy-footer'
 import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
 
@@ -42,6 +42,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <LocofyFooter />
     </div>
   )
 }

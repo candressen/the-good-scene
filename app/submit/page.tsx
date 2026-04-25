@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer'
+import LocofyFooter from '@/components/locofy-footer'
 import type { Metadata } from 'next'
 import SubmitForm from '@/components/SubmitForm'
 
@@ -29,6 +29,7 @@ export default function SubmitPage() {
           <SubmitForm />
         </div>
       </section>
+      <LocofyFooter />
     </div>
   )
 }
