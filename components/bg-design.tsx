@@ -19,13 +19,12 @@ const BgDesign: NextPage<BgDesignType> = ({ className = "" }) => {
         alt=""
         src="/streamline-color-ai-network-spark@2x.png"
       />
-      <Image
-        className="w-screen h-[1529px] absolute !!m-[0 important] top-[0px] left-[50%] -translate-x-1/2 overflow-hidden shrink-0 z-[0] pointer-events-none"
-        width={1440}
-        height={1529}
-        sizes="100vw"
-        alt=""
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src="/Vector-2.svg"
+        alt=""
+        className="absolute top-0 left-0 w-full h-[1529px] z-[0] pointer-events-none object-cover"
+        style={{ left: '50%', transform: 'translateX(-50%)', width: '100vw', maxWidth: 'none' }}
       />
       <div className="self-stretch flex items-start justify-center py-0 pl-5 pr-[23px] box-border max-w-full shrink-0">
         <div className="flex items-start relative isolate max-w-full">
