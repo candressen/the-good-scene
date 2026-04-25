@@ -25,7 +25,7 @@ const EventHighlights: NextPage<EventHighlightsType> = ({ className = "" }) => {
           src="/iconoir-spark@2x.png"
         />
         <div className="h-7 w-7 absolute !!m-[0 important] top-[50.28px] right-[190.8px] overflow-hidden shrink-0 [transform:_rotate(-11.3deg)] [transform-origin:0_0]" />
-        <div className="flex-1 bg-accent-2 flex items-start py-[31px] pl-[395px] pr-[392px] box-border max-w-full z-[1] shrink-0 mq750:pl-[197px] mq750:pr-[196px] mq750:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
+        <div className="flex-1 bg-[#2d2828] flex items-start py-[31px] pl-[395px] pr-[392px] box-border max-w-full z-[1] shrink-0 mq750:pl-[197px] mq750:pr-[196px] mq750:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
           <h1 className="m-0 relative text-[length:inherit] tracking-[0.02em] uppercase font-extrabold font-[inherit] mq750:text-[40px] mq450:text-2xl">
             Weekly Drop
           </h1>
@@ -48,8 +48,8 @@ const EventHighlights: NextPage<EventHighlightsType> = ({ className = "" }) => {
                 <EventInstances key={index} />
               ))}
             </div>
-            <button className="cursor-pointer [border:none] py-3.5 px-8 bg-white border border-accent-2 rounded-lg flex items-center justify-center hover:bg-gray-50">
-              <div className="relative text-base font-medium font-[Poppins] text-accent-2 text-left">
+            <button className="cursor-pointer [border:none] py-3.5 px-8 bg-white border border-[#2d2828] rounded-lg flex items-center justify-center hover:bg-gray-50">
+              <div className="relative text-base font-medium font-[Poppins] text-[#2d2828] text-left">
                 View More
               </div>
             </button>
