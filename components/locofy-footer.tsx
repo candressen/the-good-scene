@@ -9,7 +9,7 @@ export type FooterType = {
 const Footer: NextPage<FooterType> = ({ className = "" }) => {
   return (
     <footer
-      className={`self-stretch bg-accent-2 overflow-hidden flex flex-col items-start pt-[76px] px-[60px] pb-7 box-border gap-7 max-w-full text-left text-base text-white font-[Poppins] mq750:pt-[49px] mq750:px-[30px] mq750:pb-5 mq750:box-border ${className}`}
+      className={`self-stretch bg-[#2d2828] overflow-hidden flex flex-col items-start pt-[76px] px-[60px] pb-7 box-border gap-7 max-w-full text-left text-base text-white font-[Poppins] mq750:pt-[49px] mq750:px-[30px] mq750:pb-5 mq750:box-border ${className}`}
     >
       <div className="self-stretch flex flex-col items-start gap-[93px] max-w-full mq750:gap-[46px] mq450:gap-[23px]">
         <div className="self-stretch flex items-start justify-between gap-5 max-w-full mq1250:flex-wrap mq1250:gap-5">
@@ -129,7 +129,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                       Enter your email
                     </div>
                   </div>
-                  <button className="cursor-pointer border-accent-2 border-solid border-[1px] py-1.5 px-[19px] bg-accent-2 rounded-lg flex items-center justify-center hover:bg-[#524a4a] hover:border-[#524a4a] hover:border-solid hover:hover:border-[1px] hover:box-border">
+                  <button className="cursor-pointer border-[#2d2828] border-solid border-[1px] py-1.5 px-[19px] bg-[#2d2828] rounded-lg flex items-center justify-center hover:bg-[#524a4a] hover:border-[#524a4a] hover:border-solid hover:hover:border-[1px] hover:box-border">
                     <div className="relative text-base font-medium font-[Poppins] text-white text-center">
                       Subscribe
                     </div>

@@ -20,7 +20,7 @@ const BgDesign: NextPage<BgDesignType> = ({ className = "" }) => {
         src="/streamline-color-ai-network-spark@2x.png"
       />
       <Image
-        className="w-full h-[1529px] absolute !!m-[0 important] top-[0px] right-[0px] left-[0px] max-w-full overflow-hidden shrink-0 z-[1]"
+        className="w-full h-[1529px] absolute !!m-[0 important] top-[0px] right-[0px] left-[0px] max-w-full overflow-hidden shrink-0 z-[0] pointer-events-none opacity-40"
         width={1440}
         height={1529}
         sizes="100vw"
@@ -93,7 +93,7 @@ const BgDesign: NextPage<BgDesignType> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-      <div className="self-stretch bg-accent-2 flex flex-col items-start pt-[18px] px-[60px] pb-[72px] box-border max-w-full shrink-0 text-left text-[120px] text-white font-[Poppins] mq750:pl-[30px] mq750:pr-[30px] mq750:pb-[31px] mq750:box-border mq1100:pt-5 mq1100:pb-[47px] mq1100:box-border">
+      <div className="self-stretch bg-[#2d2828] flex flex-col items-start pt-[18px] px-[60px] pb-[72px] box-border max-w-full shrink-0 text-left text-[120px] text-white font-[Poppins] mq750:pl-[30px] mq750:pr-[30px] mq750:pb-[31px] mq750:box-border mq1100:pt-5 mq1100:pb-[47px] mq1100:box-border">
         <div className="w-[1440px] h-[975px] relative bg-accent-2 hidden max-w-full z-[1] shrink-0" />
         <h1 className="m-0 w-[760px] h-[720px] relative text-[length:inherit] font-black font-[inherit] inline-block max-w-full z-[3] shrink-0 mq750:text-5xl mq450:text-3xl">
           A More Thoughtful Way to Go Out
