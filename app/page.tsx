@@ -4,6 +4,7 @@ import FrameComponent from "@/components/frame-component";
 import EventHighlights from "@/components/event-highlights";
 import BgDesign from "@/components/bg-design";
 import FrameComponent11 from "@/components/frame-component1";
+import LocofyFooter from "@/components/locofy-footer";
 
 const HomePage: NextPage = () => {
   return (
@@ -31,6 +32,7 @@ const HomePage: NextPage = () => {
         alt=""
         src="/streamline-color-ai-network-spark1@2x.png"
       />
+      <LocofyFooter />
     </div>
   );
 };
