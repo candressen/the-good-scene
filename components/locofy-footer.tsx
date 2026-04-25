@@ -1,3 +1,4 @@
+"use client";
 import type { NextPage } from "next";
 import Image from "next/image";
 
@@ -34,27 +35,18 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   <div className="self-stretch relative font-medium">
                     Follow Us at:
                   </div>
-                  <div className="self-stretch flex items-center gap-3 text-center text-sm font-['Font_Awesome_5_Brands']">
-                    <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start py-[7px] px-2 box-border">
-                      <div className="h-3.5 w-[11px] relative leading-[14px] flex items-center justify-center shrink-0">
-                        
-                      </div>
-                    </div>
-                    <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start py-[7px] pl-[7px] pr-1.5 box-border">
-                      <div className="h-3.5 w-[14.2px] relative leading-[14px] flex items-center justify-center">
-                        
-                      </div>
-                    </div>
-                    <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start p-[7px] box-border">
-                      <div className="h-3.5 w-[12.4px] relative leading-[14px] flex items-center justify-center">
-                        
-                      </div>
-                    </div>
-                    <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start py-[7px] px-1.5 box-border">
-                      <div className="h-3.5 w-[15.9px] relative leading-[14px] flex items-center justify-center">
-                        
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    {[
+                      { label: 'f', href: '#', title: 'Facebook' },
+                      { label: 'in', href: '#', title: 'Instagram' },
+                      { label: 'tw', href: '#', title: 'Twitter' },
+                      { label: 'yt', href: '#', title: 'YouTube' },
+                    ].map((s) => (
+                      <a key={s.title} href={s.href} aria-label={s.title}
+                        className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.15)] flex items-center justify-center text-[10px] font-bold text-white hover:bg-[rgba(255,255,255,0.25)] transition-colors">
+                        {s.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>

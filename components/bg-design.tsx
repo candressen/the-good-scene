@@ -8,7 +8,7 @@ export type BgDesignType = {
 const BgDesign: NextPage<BgDesignType> = ({ className = "" }) => {
   return (
     <div
-      className={`self-stretch flex flex-col items-start pt-[25px] px-0 pb-0 box-border relative isolate gap-[65px] max-w-full z-[2] text-center text-2xl text-accent-3 font-['Cabin_Condensed'] mq750:gap-8 mq450:gap-4 ${className}`}
+      className={`self-stretch flex flex-col items-start pt-[25px] px-0 pb-0 box-border relative isolate gap-[65px] max-w-full z-[2] text-center text-2xl text-accent-3 font-['Cabin_Condensed'] mq750:gap-8 mq450:gap-4 bg-[#fdf6ee] ${className}`}
     >
       <Image
         className="w-[34.2px] absolute !!m-[0 important] top-[42.2px] right-[80px] max-h-full object-contain z-[1] shrink-0"

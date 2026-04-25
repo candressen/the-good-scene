@@ -48,8 +48,8 @@ const EventHighlights: NextPage<EventHighlightsType> = ({ className = "" }) => {
                 <EventInstances key={index} />
               ))}
             </div>
-            <button className="cursor-pointer [border:none] py-3.5 px-8 bg-accent-2 rounded-lg flex items-center justify-center hover:bg-[#524a4a]">
-              <div className="relative text-base font-medium font-[Poppins] text-white text-left">
+            <button className="cursor-pointer [border:none] py-3.5 px-8 bg-white border border-accent-2 rounded-lg flex items-center justify-center hover:bg-gray-50">
+              <div className="relative text-base font-medium font-[Poppins] text-accent-2 text-left">
                 View More
               </div>
             </button>
