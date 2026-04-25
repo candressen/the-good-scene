@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from '@/components/Footer'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import type { Event } from '@/lib/airtable'
