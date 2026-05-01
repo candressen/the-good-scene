@@ -15,7 +15,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className='fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1200px] px-6 font-poppins text-[#1e1716]'>
+    <header className='fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[1200px] px-0 font-poppins text-[#1e1716]'>
       <div className='flex h-16 w-full items-center justify-between rounded-2xl bg-white px-6 shadow-sm border border-[#e3e2dd]'>
         <Link href='/' className='flex items-center'>
           <Image

@@ -12,8 +12,8 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
     <div
       className={`self-stretch flex items-start py-0 px-[60px] box-border max-w-full text-left text-5xl text-accent-2 font-['Playfair_Display'] mq750:pl-[30px] mq750:pr-[30px] mq750:box-border ${className}`}
     >
-      <div className="h-[603px] flex-1 relative max-w-full mq750:h-auto mq750:min-h-[603px]">
-        <div className="absolute top-[129px] left-[0px] shadow-[0px_4px_16px_rgba(0,_0,_0,_0.25)] rounded-3xl bg-white w-full h-[474px] overflow-hidden flex items-start py-14 px-[61px] box-border max-w-full mq750:h-auto mq750:gap-4 mq750:pl-[30px] mq750:pr-[30px] mq750:box-border">
+      <div className="flex-1 relative max-w-full min-h-[500px] mq450:min-h-0">
+        <div className="relative mt-[60px] shadow-[0px_4px_16px_rgba(0,_0,_0,_0.25)] rounded-3xl bg-white w-full overflow-hidden flex items-start py-14 px-[61px] box-border max-w-full mq750:py-10 mq750:px-[30px] mq450:py-8 mq450:px-5">
           <div className="w-[592px] flex flex-col items-start gap-10 max-w-full mq750:gap-5">
             <h2 className="m-0 self-stretch relative text-[length:inherit] capitalize italic font-bold font-[inherit] mq750:text-[38px] mq450:text-[29px]">
               <span>{`Be `}</span>

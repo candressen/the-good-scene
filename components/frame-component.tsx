@@ -10,7 +10,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
     <div className={`absolute inset-0 flex flex-col items-center justify-center text-center z-10 ${className}`}>
       <div className="flex flex-col items-center gap-5 px-6 max-w-[900px] w-full">
         <h2
-          className="m-0 text-[52px] italic font-bold font-['Playfair_Display'] text-white leading-tight mq750:text-[38px] mq450:whitespace-normal mq450:text-[28px]"
+          className="m-0 text-[52px] italic font-bold font-['Playfair_Display'] text-white leading-tight mq750:text-[38px] mq450:text-[24px] mq450:[white-space:normal]"
           style={{ whiteSpace: 'nowrap' }}
         >
           <span>Step Into the </span>
