@@ -30,12 +30,12 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
                 and become part of a carefully curated social experience.
               </div>
               <div className="flex items-start pt-4 px-0 pb-0 gap-4 mq750:flex-wrap">
-                <button className="cursor-pointer [border:none] py-3.5 px-8 bg-accent-2 rounded-lg flex items-center justify-center hover:bg-[#524a4a]">
+                <button className="cursor-pointer [border:none] py-3.5 px-8 bg-[#2d2828] rounded-lg flex items-center justify-center hover:bg-[#524a4a]">
                   <div className="relative text-base font-medium font-[Poppins] text-white text-left">
                     Submit Your Proposal
                   </div>
                 </button>
-                <button className="cursor-pointer border-accent-2 border-solid border-[1px] py-3 px-[31px] bg-[transparent] rounded-lg flex items-center justify-center hover:bg-[rgba(82,74,74,0.09)] hover:border-[#524a4a] hover:border-solid hover:hover:border-[1px] hover:box-border">
+                <button className="cursor-pointer border-[#2d2828] border-solid border-[1px] py-3 px-[31px] bg-[transparent] rounded-lg flex items-center justify-center hover:bg-[rgba(82,74,74,0.09)]">
                   <div className="relative text-base font-medium font-[Poppins] text-accent-2 text-left">
                     Contact Us
                   </div>
