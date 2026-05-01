@@ -7,63 +7,55 @@ export type SectionType = {
 
 const Section: NextPage<SectionType> = ({ className = "" }) => {
   return (
-    <section
-      className={`self-stretch h-[680px] relative bg-accent-1 overflow-hidden shrink-0 max-w-full ${className}`}
-    >
-      <Image
-        className="absolute top-[43.4px] left-[53.1px] w-[375.3px] h-[228.3px] object-contain"
-        loading="lazy"
-        width={375.3}
-        height={228.3}
-        sizes="100vw"
-        alt=""
-        src="/Group-2@2x.png"
-      />
-      <section className="absolute top-[calc(50%_-_211px)] left-[calc(50%_-_435px)] w-[871px] flex flex-col items-center gap-[38.5px] max-w-full text-center text-5xl text-white font-['Playfair_Display']">
-        <div className="flex items-center justify-center py-0 px-5">
-          <h1 className="m-0 relative text-[length:inherit] capitalize italic font-bold font-[inherit]">
+    <section className={`self-stretch relative bg-[#e7645b] overflow-hidden shrink-0 min-h-[680px] max-w-full ${className}`}>
+
+      {/* TOP-LEFT image cluster */}
+      <div className="absolute" style={{ top: '44px', left: '54px', width: '375px', height: '240px', zIndex: 2 }}>
+        {/* Back image - cocktail/drinks scene, slightly behind */}
+        <div className="absolute rounded-xl overflow-hidden" style={{ top: '55px', left: '100px', width: '262px', height: '160px', transform: 'rotate(3deg)', zIndex: 1 }}>
+          <Image src="/Group-2@2x.png" alt="" fill className="object-cover" sizes="262px" />
+        </div>
+        {/* Front image - dance/celebration scene, overlapping */}
+        <div className="absolute rounded-xl overflow-hidden" style={{ top: '15px', left: '0px', width: '292px', height: '185px', transform: 'rotate(-2deg)', zIndex: 2 }}>
+          <Image src="/Group-2@2x.png" alt="" fill className="object-cover" sizes="292px" />
+        </div>
+      </div>
+
+      {/* CENTER text block */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-20 min-h-[680px]">
+        <div className="flex flex-col items-center gap-6 max-w-[700px]">
+          <h2 className="m-0 text-5xl italic font-bold font-['Playfair_Display'] text-white leading-tight mq750:text-[38px] mq450:text-[28px]">
             Guided by Trust,
             <br />
             Not Trends
-          </h1>
+          </h2>
+          <p className="m-0 text-lg font-['Poppins'] text-white/80 leading-relaxed max-w-[600px]">
+            Our recommendations are built on thoughtful consideration, not
+            algorithms alone. We aim to provide insight you can rely on — so when
+            you choose something from here, you can feel confident in your decision.
+            <br /><br />
+            We&apos;re not here to promote everything. We&apos;re here to highlight what
+            truly stands out, giving you a clearer, more dependable way to
+            navigate your social life.
+          </p>
+          <div className="pt-2">
+            <button className="cursor-pointer border-none py-3.5 pl-8 pr-6 bg-white rounded-lg flex items-center gap-2 hover:bg-[#e6e6e6]">
+              <span className="text-base font-medium font-['Poppins'] text-[#2d2828]">Contact Us</span>
+            </button>
+          </div>
         </div>
-        <div className="self-stretch relative text-lg font-[Poppins]">
-          Our recommendations are built on thoughtful consideration, not
-          algorithms alone. We aim to provide insight you can rely on — so when
-          you choose something from here, you can feel confident in your
-          decision.
-          <br />
-          We’re not here to promote everything. We’re here to highlight what
-          truly stands out, giving you a clearer, more dependable way to
-          navigate your social life.
-        </div>
-        <div className="flex flex-col items-start pt-4 px-5 pb-0">
-          <button className="cursor-pointer [border:none] py-3.5 pl-8 pr-[30px] bg-white h-[52px] rounded-lg flex items-center justify-center box-border hover:bg-[#e6e6e6]">
-            <div className="relative text-base font-medium font-[Poppins] text-accent-2 text-left">
-              Contact Us
-            </div>
-          </button>
-        </div>
-      </section>
-      <div className="absolute top-[406.6px] left-[1037px] w-[371.1px] h-64">
-        <Image
-          className="absolute top-[0px] left-[6.9px] w-full h-full object-contain"
-          loading="lazy"
-          width={364.2}
-          height={256}
-          sizes="100vw"
-          alt=""
-          src="/Group-4@2x.png"
-        />
-        <Image
-          className="absolute top-[0.4px] left-[0px] w-[346.1px] h-[223.3px] object-contain z-[2]"
-          width={346.1}
-          height={223.3}
-          sizes="100vw"
-          alt=""
-          src="/Group-3@2x.png"
-        />
       </div>
+
+      {/* BOTTOM-RIGHT image cluster - framed photo with white border */}
+      <div className="absolute" style={{ bottom: '20px', right: '45px', width: '370px', height: '260px', zIndex: 2 }}>
+        {/* White frame/border behind image, slightly rotated */}
+        <div className="absolute bg-white rounded-[16px]" style={{ inset: '0', transform: 'rotate(3deg)', zIndex: 1 }} />
+        {/* Main image on top */}
+        <div className="absolute rounded-[12px] overflow-hidden" style={{ top: '5px', left: '5px', right: '5px', bottom: '5px', zIndex: 2 }}>
+          <Image src="/Group-3@2x.png" alt="" fill className="object-cover" sizes="360px" />
+        </div>
+      </div>
+
     </section>
   );
 };
