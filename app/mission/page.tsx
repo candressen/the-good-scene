@@ -52,7 +52,7 @@ export default function MissionPage() {
               }}
             />
             <img
-              src='/images/fabiana/photo-1529903384028-929ae5dccdf1.avif'
+              src='/our-mission-14.jpg'
               className='absolute object-cover rounded-[24px]'
               style={{ right: '-40px', top: '60px', width: '703px', height: '475px' }}
               alt=''
@@ -69,7 +69,7 @@ export default function MissionPage() {
             <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '210px', top: '0px', width: '474px', height: '88px' }} />
             <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '180px', top: '280px', width: '474px', height: '88px' }} />
             <img
-              src='/images/our-mission-15.jpg'
+              src='/our-mission-15.jpg'
               className='absolute object-contain'
               style={{ left: '70px', top: '0', width: '559px', height: '372px' }}
               alt=''
@@ -81,7 +81,7 @@ export default function MissionPage() {
             <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '35px', bottom: '150px', width: '491px', height: '91px' }} />
             <div className='absolute rounded-xl bg-[#e7645b]' style={{ left: '90px', bottom: '0', width: '490px', height: '91px' }} />
             <img
-              src='/images/our-mission-16.jpg'
+              src='/our-mission-16.jpg'
               className='absolute object-contain'
               style={{ left: '0', bottom: '0', width: '627px', height: '418px' }}
               alt=''
@@ -135,7 +135,7 @@ export default function MissionPage() {
             <div className='absolute rounded-[24px] bg-[#a791e3]' style={{ left: '0', bottom: '0', width: '506px', height: '424px' }} />
             <div className='absolute rounded-[24px] bg-[#e7645b]' style={{ left: '80px', top: '0', width: '493px', height: '404px' }} />
             <img
-              src='/images/our-mission-17.jpg'
+              src='/our-mission-17.jpg'
               className='absolute object-cover rounded-[20px]'
               style={{ left: '75px', top: '80px', width: '440px', height: '329px' }}
               alt=''
@@ -148,13 +148,13 @@ export default function MissionPage() {
         <div className='relative mx-auto' style={{ maxWidth: '1440px', minHeight: '680px' }}>
           <div className='absolute' style={{ left: '55px', top: '45px', width: '375px', height: '228px' }}>
             <img
-              src='/images/our-mission-19.jpg'
+              src='/our-mission-19.jpg'
               className='absolute object-cover rounded-xl'
               style={{ left: '3px', top: '55px', width: '292px', height: '173px' }}
               alt=''
             />
             <img
-              src='/images/our-mission-20.jpg'
+              src='/our-mission-20.jpg'
               className='absolute object-cover rounded-xl'
               style={{ left: '100px', top: '15px', width: '262px', height: '147px' }}
               alt=''
@@ -164,7 +164,7 @@ export default function MissionPage() {
           <div className='absolute' style={{ right: '45px', bottom: '15px', width: '364px', height: '256px' }}>
             <div className='absolute rounded-[16px] bg-white rotate-3' style={{ inset: '0' }} />
             <img
-              src='/images/our-mission-18.jpg'
+              src='/our-mission-18.jpg'
               className='absolute object-cover rounded-[12px]'
               style={{ left: '4px', top: '4px', width: '357px', height: '251px' }}
               alt=''
