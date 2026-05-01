@@ -10,7 +10,7 @@ const HomePage: NextPage = () => {
   return (
     <div className="w-full relative bg-background flex flex-col items-start gap-[118px] leading-[normal] tracking-[normal] mq750:gap-[59px] mq450:gap-[29px]">
       <section className="self-stretch flex flex-col items-start gap-[25px] max-w-full">
-        <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-0 box-border max-w-full relative overflow-hidden"
+        <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-0 box-border max-w-full relative"
           style={{ height: '100vh', minHeight: '1176px', backgroundImage: 'url(/hero-section.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat' }}>
           <div className="absolute inset-0 bg-black/50 z-[0]" />
           <div className="relative z-[1] w-full">
