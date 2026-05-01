@@ -8,7 +8,7 @@ import LocofyFooter from "@/components/locofy-footer";
 
 const HomePage: NextPage = () => {
   return (
-    <div className="w-full relative shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] bg-background overflow-hidden flex flex-col items-start isolate gap-[118px] leading-[normal] tracking-[normal] mq750:gap-[59px] mq450:gap-[29px]">
+    <div className="w-full relative bg-background flex flex-col items-start gap-[118px] leading-[normal] tracking-[normal] mq750:gap-[59px] mq450:gap-[29px]">
       <section className="self-stretch flex flex-col items-start gap-[25px] max-w-full">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-0 box-border max-w-full relative overflow-hidden"
           style={{ height: '100vh', minHeight: '1176px', backgroundImage: 'url(/hero-section.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat' }}>
