@@ -8,9 +8,9 @@ export type FrameComponentType = {
 const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
   return (
     <section
-      className={`self-stretch flex items-center justify-center max-w-full text-center text-[52px] text-white font-['Playfair_Display'] pt-0 mq750:text-[40px] mq450:text-[30px] ${className}`}
+      className={`self-stretch flex items-center justify-center max-w-full text-center text-[52px] text-white font-['Playfair_Display'] pb-24 mq750:text-[40px] mq450:text-[30px] ${className}`}
     >
-      <div className="flex flex-col items-center gap-5 max-w-[540px]">
+      <div className="flex flex-col items-center gap-5 max-w-[540px] text-center">
         <h2 className="m-0 relative text-[length:inherit] italic font-bold font-[inherit] leading-tight">
           <span>{`Step Into the `}</span>
           <span className="text-accent-1">Right</span>
