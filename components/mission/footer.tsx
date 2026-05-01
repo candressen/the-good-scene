@@ -1,0 +1,167 @@
+import type { NextPage } from "next";
+import Image from "next/image";
+
+export type FooterType = {
+  className?: string;
+};
+
+const Footer: NextPage<FooterType> = ({ className = "" }) => {
+  return (
+    <footer
+      className={`self-stretch bg-accent-2 overflow-hidden flex flex-col items-start pt-[76px] px-[60px] pb-7 box-border gap-[93px] max-w-full text-left text-base text-white font-[Poppins] ${className}`}
+    >
+      <div className="self-stretch flex items-start justify-between gap-5 max-w-full">
+        <div className="flex flex-col items-start pt-1.5 px-0 pb-0">
+          <div className="self-stretch flex flex-col items-start gap-[16.3px]">
+            <div className="flex items-start py-0 px-1.5">
+              <Image
+                className="h-[82.7px] flex-1 relative max-w-full overflow-hidden w-full"
+                loading="lazy"
+                width={200}
+                height={82.7}
+                sizes="100vw"
+                alt=""
+                src="/Logo1.svg"
+              />
+            </div>
+            <div className="self-stretch flex flex-col items-start gap-6">
+              <div className="self-stretch flex items-start py-0 pl-2 pr-[11px]">
+                <i className="relative">Step Into The Right Scene</i>
+              </div>
+              <div className="self-stretch h-0.5 relative bg-white" />
+              <div className="flex flex-col items-start gap-4 z-[1] text-lg">
+                <div className="self-stretch relative font-medium">
+                  Follow Us at:
+                </div>
+                <div className="self-stretch flex items-center gap-3 text-center text-sm font-['Font_Awesome_5_Brands']">
+                  <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start py-[7px] px-2 box-border">
+                    <div className="h-3.5 w-[11px] relative leading-[14px] flex items-center justify-center shrink-0">
+                      
+                    </div>
+                  </div>
+                  <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start py-[7px] pl-[7px] pr-1.5 box-border">
+                    <div className="h-3.5 w-[14.2px] relative leading-[14px] flex items-center justify-center">
+                      
+                    </div>
+                  </div>
+                  <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start p-[7px] box-border">
+                    <div className="h-3.5 w-[12.4px] relative leading-[14px] flex items-center justify-center">
+                      
+                    </div>
+                  </div>
+                  <div className="h-7 w-7 rounded-sm bg-[rgba(255,255,255,0.12)] flex items-start py-[7px] px-1.5 box-border">
+                    <div className="h-3.5 w-[15.9px] relative leading-[14px] flex items-center justify-center">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-start gap-[100px] max-w-full lg:gap-[50px] lg:flex-wrap">
+          <div className="self-stretch flex flex-col items-start gap-[21px]">
+            <div className="self-stretch flex flex-col items-start gap-1.5 text-lg">
+              <div className="relative font-medium">Quick Links</div>
+              <div className="w-20 h-0.5 relative bg-white" />
+            </div>
+            <div className="self-stretch relative">Our Mission</div>
+            <div className="self-stretch relative">Lorem</div>
+            <div className="self-stretch relative">Portal</div>
+            <div className="self-stretch h-5 relative flex items-center shrink-0">
+              Estimate
+            </div>
+          </div>
+          <div className="h-[195px] flex flex-col items-start gap-6">
+            <div className="self-stretch flex flex-col items-start gap-1.5 text-lg">
+              <div className="relative font-medium">Contact Info</div>
+              <div className="w-20 h-0.5 relative bg-white" />
+            </div>
+            <div className="flex items-center gap-3">
+              <Image
+                className="h-3.5 w-[17.5px] relative"
+                loading="lazy"
+                width={17.5}
+                height={14}
+                sizes="100vw"
+                alt=""
+                src="/mail.svg"
+              />
+              <div className="h-5 w-[184.7px] relative flex items-center">
+                mail@example.com
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <Image
+                className="h-[18px] w-[18px] relative"
+                width={18}
+                height={18}
+                sizes="100vw"
+                alt=""
+                src="/phone-in-talk.svg"
+              />
+              <div className="h-5 w-[184.7px] relative flex items-center">
+                (281) 222-2222
+              </div>
+            </div>
+            <div className="flex items-center gap-[11.7px]">
+              <Image
+                className="h-[22px] w-[17px] relative"
+                loading="lazy"
+                width={17}
+                height={22}
+                sizes="100vw"
+                alt=""
+                src="/location-on.svg"
+              />
+              <div className="relative">
+                Lorem Ipsum third floor
+                <br />
+                Tx, Houstan
+              </div>
+            </div>
+          </div>
+          <div className="h-[186px] flex flex-col items-start gap-6 max-w-full">
+            <div className="self-stretch flex flex-col items-start gap-1.5 text-lg">
+              <div className="self-stretch h-[30px] relative font-medium flex items-center">
+                Subscribe
+              </div>
+              <div className="w-20 h-0.5 relative bg-white" />
+            </div>
+            <div className="flex flex-col items-start text-subtext">
+              <div className="w-[366px] rounded-lg bg-white flex items-center py-1 pl-6 pr-1 box-border gap-2.5">
+                <div className="h-5 flex-1 overflow-hidden flex items-start">
+                  <div className="mt-[-2px] h-6 w-[130px] relative inline-block shrink-0">
+                    Enter your email
+                  </div>
+                </div>
+                <button className="cursor-pointer border-accent-2 border-solid border-[1px] py-1.5 px-[19px] bg-accent-2 rounded-lg flex items-center justify-center hover:bg-[#524a4a] hover:border-[#524a4a] hover:border-solid hover:hover:border-[1px] hover:box-border">
+                  <div className="relative text-base font-medium font-[Poppins] text-white text-center">
+                    Subscribe
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div className="self-stretch h-[52px] flex items-start pt-0.5 pb-0 px-0 box-border">
+              <div className="h-[72px] w-[366px] relative flex items-center shrink-0">
+                Send your email to receive our
+                <br />
+                newsletters and stay up to dated with new events.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="self-stretch flex flex-col items-start gap-7 text-center">
+        <div className="self-stretch h-px relative bg-white" />
+        <div className="self-stretch flex items-start py-0 px-[457px]">
+          <div className="relative">
+            Copyright 2026 The Good Scene, All Right Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
