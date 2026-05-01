@@ -15,7 +15,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className='fixed inset-x-0 top-0 z-50 px-6 pt-4 font-poppins text-[#1e1716] bg-white/95 backdrop-blur-sm'>
+    <nav className='fixed inset-x-0 top-0 z-50 px-6 pt-4 font-poppins text-[#1e1716]'>
       <div className='mx-auto flex h-16 max-w-[1200px] items-center justify-between rounded-2xl bg-white px-6 shadow-sm border border-[#e3e2dd]'>
         <Link href='/' className='flex items-center'>
           <Image
