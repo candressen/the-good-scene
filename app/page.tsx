@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Nav from "@/components/Nav";
 import FrameComponent from "@/components/frame-component";
 import EventHighlights from "@/components/event-highlights";
 import BgDesign from "@/components/bg-design";
@@ -13,7 +12,6 @@ const HomePage: NextPage = () => {
       <section className="self-stretch flex flex-col items-start gap-[25px] max-w-full">
         <div className="self-stretch flex flex-col items-center justify-center pt-0 px-0 pb-0 box-border max-w-full relative overflow-hidden"
           style={{ height: '100vh', minHeight: '1176px', backgroundImage: 'url(/hero-section.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat' }}>
-          <Nav />
           <div className="absolute inset-0 bg-black/50 z-[0]" />
           <div className="relative z-[1] w-full">
               <FrameComponent />
