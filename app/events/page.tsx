@@ -30,6 +30,30 @@ const EVENTS: Event[] = [
   { title: 'Latin Nights', date: 'Sat, Apr 19', time: '10:00 PM', location: 'North End', venue: 'Salsa Verde', address: '300 Hanover Street, Boston', description: 'Salsa, bachata, and reggaeton all night long.', tags: ['Reggaeton'], image: '/Rectangle-65@2x.png' },
 ]
 
+function FollowButton() {
+  const [following, setFollowing] = useState(false)
+  return (
+    <button
+      onClick={() => setFollowing(f => !f)}
+      className={"rounded-[10px] border px-5 py-2 text-[14px] font-semibold transition font-['Poppins'] " + (following ? "border-[#9b8ae6] bg-[#9b8ae6] text-white" : "border-[#1e1513] text-[#1e1513] hover:bg-[#1e1513] hover:text-white")}
+    >
+      {following ? "Following" : "+ Follow"}
+    </button>
+  )
+}
+
+function SaveButton() {
+  const [saved, setSaved] = useState(false)
+  return (
+    <button
+      onClick={() => setSaved(s => !s)}
+      className={"rounded-[10px] border px-5 py-3 text-[14px] font-semibold transition font-['Poppins'] " + (saved ? "border-[#9b8ae6] bg-[#9b8ae6] text-white" : "border-[#1e1513] text-[#1e1513] hover:bg-[#1e1513] hover:text-white")}
+    >
+      {saved ? "Saved ✓" : "Save Event"}
+    </button>
+  )
+}
+
 function EventModal({ event, onClose }: { event: Event; onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 px-4 py-8" onClick={onClose}>
@@ -38,7 +62,7 @@ function EventModal({ event, onClose }: { event: Event; onClose: () => void }) {
         <button onClick={onClose} className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full bg-[#e76255] text-white text-lg font-bold hover:bg-[#d15545]">×</button>
 
         {/* Logo */}
-        <Image src="/logos/logo.svg" alt="The Good Scene" width={160} height={58} className="mb-8 h-[58px] w-auto object-contain" />
+        <Image src="/logos/logo.svg" alt="The Good Scene" width={160} height={58} className="mb-8 h-[72px] w-auto object-contain scale-[1.25] origin-left" />
 
         {/* Main card */}
         <div className="rounded-[16px] bg-[#f1f1f1] p-6">
@@ -84,10 +108,10 @@ function EventModal({ event, onClose }: { event: Event; onClose: () => void }) {
               <p className="text-[14px] text-[#1e1513]/65 font-['Poppins']">The Good Scene</p>
             </div>
           </div>
-          <button className="rounded-[10px] border border-[#1e1513] px-5 py-2 text-[14px] font-semibold text-[#1e1513] hover:bg-[#1e1513] hover:text-white transition font-['Poppins']">+ Follow</button>
+          <FollowButton />
         </div>
 
-        {/* Interest row */}
+        {/* Action row */}
         <div className="mt-5 flex flex-col gap-4 rounded-[14px] bg-[#f1f1f1] px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <div className="flex -space-x-2">
@@ -97,9 +121,13 @@ function EventModal({ event, onClose }: { event: Event; onClose: () => void }) {
             </div>
             <p className="text-[14px] text-[#1e1513]/75 font-['Poppins']">76 people interested</p>
           </div>
-          <button className="rounded-full bg-[#e76255] px-6 py-2.5 text-[14px] font-semibold text-white hover:bg-[#d15545] transition font-['Poppins']">
-            I&apos;m Interested
-          </button>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <SaveButton />
+            {/* TODO: replace with reservation flow */}
+            <a href="#" className="rounded-[10px] bg-[#1e1513] px-5 py-3 text-center text-[14px] font-semibold text-white transition hover:opacity-85 font-['Poppins']">
+              Reserve Spot
+            </a>
+          </div>
         </div>
       </div>
     </div>
