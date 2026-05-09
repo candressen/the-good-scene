@@ -6,26 +6,35 @@ export type FrameComponent1Type = { className?: string };
 
 const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   return (
-    <div className={`mx-auto flex max-w-[1240px] items-center justify-between gap-12 px-6 py-20 w-full ${className}`}>
-
-      {/* LEFT: Image stack — overflow-visible, inner padding for rotation breathing room */}
-      <div className="relative w-[580px] h-[380px] overflow-visible flex-shrink-0 ml-4 lg:ml-8">
-        {/* Inner safety wrapper with padding */}
-        <div className="relative w-full h-full p-6">
-          {/* Purple — back */}
-          <div className="absolute inset-6 rounded-[24px] bg-[#9b8ae6]" style={{ transform: 'rotate(-4deg)', zIndex: 1 }} />
-          {/* Coral — middle */}
-          <div className="absolute left-10 top-10 w-full h-full rounded-[24px] bg-[#e7675b]" style={{ transform: 'rotate(3deg)', zIndex: 2 }} />
-          {/* Image — top */}
-          <div className="relative z-10 w-full h-full rounded-[20px] overflow-hidden" style={{ transform: 'rotate(-3deg)' }}>
-            <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="520px" />
+    <>
+      {/* Image stack — left grid cell */}
+      <div className={`relative overflow-visible ${className}`}>
+        <div className="relative w-[600px] h-[390px] overflow-visible p-8">
+          {/* Purple — back, z-10 */}
+          <div className="absolute inset-8 z-10 rounded-[26px] bg-[#9b8ae6]"
+            style={{ transform: 'rotate(-4deg)' }} />
+          {/* Red — behind, z-0 */}
+          <div className="absolute left-12 top-12 z-0 h-full w-full rounded-[26px] bg-[#e7675b]"
+            style={{ transform: 'rotate(3deg)' }} />
+          {/* Image — front, z-30 */}
+          <div className="relative z-30 h-full w-full rounded-[22px] overflow-hidden"
+            style={{ transform: 'rotate(-3deg)' }}>
+            <Image
+              src="/mission-hero-photo.png"
+              alt="Our Mission"
+              fill
+              className="object-cover"
+              sizes="560px"
+            />
           </div>
         </div>
       </div>
 
-      {/* RIGHT: Text */}
+      {/* Text — right grid cell */}
       <div className="max-w-[520px]">
-        <h1 className="text-[52px] md:text-[64px] italic font-bold leading-tight font-['Playfair_Display'] text-white">Our Mission</h1>
+        <h1 className="text-[52px] md:text-[64px] italic font-bold leading-tight font-['Playfair_Display'] text-white">
+          Our Mission
+        </h1>
         <p className="mt-4 text-[17px] leading-[1.6] font-['Poppins'] text-white/80 max-w-[460px]">
           We&apos;re building a more thoughtful way to experience social life — one that values intention, comfort, and meaningful connection over noise and volume.
         </p>
@@ -36,7 +45,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default FrameComponent1;

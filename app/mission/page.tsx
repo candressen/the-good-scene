@@ -12,10 +12,15 @@ export const metadata: Metadata = {
 
 export default function MissionPage() {
   return (
-    <div className="w-full max-w-full overflow-x-hidden flex flex-col">
-      <main className="self-stretch bg-[#1e1513] shrink-0 flex items-start pt-20 pb-14 w-full overflow-visible">
-        <FrameComponent1 />
-      </main>
+    <div className="w-full flex flex-col">
+      {/* Hero — overflow-x-hidden on section only, not on wrapper */}
+      <section className="relative bg-[#1e1513] overflow-x-hidden">
+        <div className="mx-auto max-w-[1240px] px-6 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 overflow-visible">
+            <FrameComponent1 />
+          </div>
+        </div>
+      </section>
       <FrameComponent2 />
       <FrameComponent3 />
       <Section />

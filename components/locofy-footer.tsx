@@ -9,7 +9,7 @@ export type FooterType = {
 const Footer: NextPage<FooterType> = ({ className = "" }) => {
   return (
     <footer
-      className={`w-full bg-[#1e1513] px-6 pt-12 pb-6 text-white font-[Poppins] ${className}`}
+      className={`w-full bg-[#1e1513] px-6 pt-10 pb-5 text-white font-[Poppins] ${className}`}
     >
       <div className="mx-auto max-w-[1240px] flex flex-col gap-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr_1.3fr]">
@@ -17,7 +17,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
             <div className="self-stretch flex flex-col items-start gap-[16.3px]">
               <div className="flex items-start py-0 px-1.5">
                 <Image
-                  className="h-[52px] w-auto object-contain"
+                  className="h-[46px] w-auto object-contain"
                   loading="lazy"
                   width={200}
                   height={82.7}
