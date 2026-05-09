@@ -8,15 +8,18 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   return (
     <div className={`mx-auto flex max-w-[1240px] items-center justify-between gap-12 px-6 py-20 w-full ${className}`}>
 
-      {/* LEFT: Image stack — overflow-visible, safe padding */}
-      <div className="relative w-[560px] h-[370px] overflow-visible p-4 flex-shrink-0">
-        {/* Purple — back */}
-        <div className="absolute inset-4 rounded-[24px] bg-[#9b8ae6]" style={{ transform: 'rotate(-4deg)', zIndex: 1 }} />
-        {/* Coral — middle */}
-        <div className="absolute top-8 left-8 h-full w-full rounded-[24px] bg-[#e7675b]" style={{ transform: 'rotate(3deg)', zIndex: 2 }} />
-        {/* Image — top */}
-        <div className="relative z-10 h-full w-full rounded-[20px] overflow-hidden" style={{ transform: 'rotate(-3deg)' }}>
-          <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="520px" />
+      {/* LEFT: Image stack — overflow-visible, inner padding for rotation breathing room */}
+      <div className="relative w-[580px] h-[380px] overflow-visible flex-shrink-0 ml-4 lg:ml-8">
+        {/* Inner safety wrapper with padding */}
+        <div className="relative w-full h-full p-6">
+          {/* Purple — back */}
+          <div className="absolute inset-6 rounded-[24px] bg-[#9b8ae6]" style={{ transform: 'rotate(-4deg)', zIndex: 1 }} />
+          {/* Coral — middle */}
+          <div className="absolute left-10 top-10 w-full h-full rounded-[24px] bg-[#e7675b]" style={{ transform: 'rotate(3deg)', zIndex: 2 }} />
+          {/* Image — top */}
+          <div className="relative z-10 w-full h-full rounded-[20px] overflow-hidden" style={{ transform: 'rotate(-3deg)' }}>
+            <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="520px" />
+          </div>
         </div>
       </div>
 
