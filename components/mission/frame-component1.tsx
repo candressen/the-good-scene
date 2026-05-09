@@ -10,7 +10,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
     <div className={`self-stretch flex items-center justify-between max-w-[1150px] mx-auto px-6 py-16 gap-[60px] shrink-0 w-full ${className}`}>
 
       {/* LEFT: Image stack — dominant, pulled left */}
-      <div className="relative w-[520px] h-[360px] -ml-6 mt-2 flex-shrink-0">
+      <div className="relative w-[560px] h-[380px] flex-shrink-0" style={{ marginLeft: "-20px", overflow: "visible" }}>
 
         {/* Coral — bottom, rotate -6deg, scale 1.08, peek down */}
         <div className="absolute inset-0 bg-[#E46A5A] rounded-[32px]"
@@ -22,7 +22,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
 
         {/* Image — top, rotate -4deg, shadow */}
         <div className="absolute inset-0 rounded-[28px] overflow-hidden"
-          style={{ transform: 'rotate(-4deg)', zIndex: 3, boxShadow: '0 20px 40px rgba(0,0,0,0.25)' }}>
+          style={{ transform: 'rotate(-5deg)', zIndex: 3, boxShadow: '0 20px 40px rgba(0,0,0,0.25)' }}>
           <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="520px" />
         </div>
       </div>
