@@ -1,48 +1,35 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-export type EventInstancesType = {
-  className?: string;
-};
-
-const EventInstances: NextPage<EventInstancesType> = ({ className = "" }) => {
+const EventInstances: NextPage<{ className?: string }> = ({ className = "" }) => {
   return (
-    <section
-      className={`w-[424px] shadow-[0px_4px_12px_rgba(0,_0,_0,_0.16)] rounded-3xl bg-white overflow-hidden shrink-0 flex flex-col items-start pt-4 px-4 pb-6 box-border gap-6 text-left text-2xl text-[#000] font-[Poppins] ${className}`}
-    >
+    <section className={`rounded-[16px] bg-white p-4 shadow-[0_8px_20px_rgba(0,0,0,0.12)] flex flex-col items-start text-left font-['Poppins'] ${className}`}>
       <Image
-        className="self-stretch h-[230px] relative rounded-2xl max-w-full overflow-hidden shrink-0 object-cover"
+        className="h-[160px] w-full rounded-[12px] object-cover"
         loading="lazy"
         width={392}
-        height={230}
-        sizes="100vw"
+        height={160}
+        sizes="(max-width:768px) 100vw, 33vw"
         alt=""
         src="/Rectangle-64@2x.png"
       />
-      <div className="self-stretch flex flex-col items-start py-0 px-1 gap-3">
-        <div className="flex flex-col items-start gap-1">
-          <h3 className="m-0 relative text-[length:inherit] font-medium font-[inherit] mq450:text-[19px]">
-            Rooftop Social Night
-          </h3>
-          <div className="flex items-center gap-2 text-lg text-subtext mq450:flex-wrap">
-            <div className="relative">Fri, Mar 15</div>
-            <div className="h-1.5 w-1.5 relative rounded-[50%] bg-subtext" />
-            <div className="relative whitespace-nowrap">10:15 PM</div>
-            <div className="h-1.5 w-1.5 relative rounded-[50%] bg-subtext" />
-            <div className="relative">Downtown</div>
-          </div>
-        </div>
-        <div className="self-stretch relative text-lg">
-          An easygoing evening with music, drinks, and a welcoming crowd.
+      <div className="mt-4 flex flex-col gap-1 w-full">
+        <h3 className="text-[20px] font-bold text-[#1e1513]">Rooftop Social Night</h3>
+        <div className="flex items-center gap-2 text-[14px] font-medium text-[#1e1513]/70 flex-wrap">
+          <span>Fri, Mar 15</span>
+          <span className="h-1 w-1 rounded-full bg-current opacity-50" />
+          <span>10:15 PM</span>
+          <span className="h-1 w-1 rounded-full bg-current opacity-50" />
+          <span>Downtown</span>
         </div>
       </div>
-      <div className="flex items-center justify-center py-0 px-1 text-lg text-accent-1">
-        <div className="relative [text-decoration:underline] font-medium">
-          Read More
-        </div>
-      </div>
+      <p className="mt-3 text-[14px] leading-[1.45] text-[#1e1513]/75">
+        An easygoing evening with music, drinks, and a welcoming crowd.
+      </p>
+      <a href="#" className="mt-3 inline-block text-[14px] font-semibold text-[#e76255] hover:underline">
+        Read More
+      </a>
     </section>
   );
 };
-
 export default EventInstances;

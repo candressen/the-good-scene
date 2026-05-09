@@ -10,7 +10,7 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
 }) => {
   return (
     <div
-      className={`self-stretch flex items-start py-0 px-[60px] box-border max-w-full text-left text-5xl text-accent-2 font-['Playfair_Display'] mq750:pl-[30px] mq750:pr-[30px] mq750:box-border ${className}`}
+      className={`relative mx-auto flex max-w-[1180px] flex-col overflow-hidden rounded-[22px] bg-white px-8 py-10 shadow-[0_10px_30px_rgba(0,0,0,0.12)] lg:min-h-[260px] lg:flex-row lg:items-center lg:px-12 ${className}`}
     >
       <div className="flex-1 relative max-w-full min-h-[500px] mq450:min-h-0">
         <div className="relative mt-[60px] shadow-[0px_4px_16px_rgba(0,_0,_0,_0.25)] rounded-3xl bg-white w-full overflow-hidden flex items-start py-14 px-[61px] box-border max-w-full mq750:py-10 mq750:px-[30px] mq450:py-8 mq450:px-5">
@@ -29,13 +29,13 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
                 together in the right way. Submit your event for consideration
                 and become part of a carefully curated social experience.
               </div>
-              <div className="flex items-start pt-4 px-0 pb-0 gap-4 mq750:flex-wrap">
-                <button className="cursor-pointer [border:none] py-3.5 px-8 bg-[#2d2828] rounded-lg flex items-center justify-center hover:bg-[#524a4a]">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <button className="cursor-pointer border-none rounded-full bg-[#1e1513] px-6 py-3 text-[14px] font-semibold text-white hover:bg-black">
                   <div className="relative text-base font-medium font-[Poppins] text-white text-left">
                     Submit Your Proposal
                   </div>
                 </button>
-                <button className="cursor-pointer border-[#2d2828] border-solid border-[1px] py-3 px-[31px] bg-[transparent] rounded-lg flex items-center justify-center hover:bg-[rgba(82,74,74,0.09)]">
+                <button className="cursor-pointer rounded-full border border-[#1e1513] bg-white px-6 py-3 text-[14px] font-semibold text-[#1e1513] hover:bg-[#f5f5f5]">
                   <div className="relative text-base font-medium font-[Poppins] text-accent-2 text-left">
                     Contact Us
                   </div>

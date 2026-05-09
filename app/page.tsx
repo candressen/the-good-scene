@@ -8,28 +8,33 @@ import LocofyFooter from "@/components/locofy-footer";
 
 const HomePage: NextPage = () => {
   return (
-    <div className="w-full relative bg-background flex flex-col items-start gap-[118px] leading-[normal] tracking-[normal] mq750:gap-[59px] mq450:gap-[29px]">
-      <section className="self-stretch flex flex-col items-start gap-[25px] max-w-full">
-        <div className="self-stretch max-w-full relative"
-          style={{ height: '100vh', minHeight: '1176px', backgroundImage: 'url(/hero-section.png)', backgroundSize: 'cover', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat' }}>
-          <div className="absolute inset-0 bg-black/50 z-[0]" />
-          <FrameComponent />
-        </div>
-        <EventHighlights />
+    <div className="w-full overflow-x-hidden bg-[#1e1513] flex flex-col">
+
+      {/* Hero */}
+      <section className="relative min-h-[620px] w-full overflow-hidden bg-[#1e1513] pt-[120px] md:min-h-[680px] lg:min-h-[720px]">
+        <Image
+          src="/hero-section.png"
+          alt=""
+          fill
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/45" />
+        <FrameComponent />
       </section>
-      <main className="self-stretch flex flex-col items-start pt-0 px-0 pb-[61px] box-border gap-[67px] max-w-full mq750:gap-[33px] mq750:pb-5 mq750:box-border mq450:gap-[17px] mq1250:pb-[26px] mq1250:box-border">
-        <BgDesign />
+
+      {/* Weekly Drop */}
+      <EventHighlights />
+
+      {/* What Makes Us Different */}
+      <BgDesign />
+
+      {/* Be Part of the Scene */}
+      <div className="bg-[#e9ebe4] px-6 py-20">
         <FrameComponent11 />
-      </main>
-      <Image
-        className="w-[51.8px] absolute !!m-[0 important] bottom-[1076.2px] left-[40px] max-h-full object-contain z-[1]"
-        loading="lazy"
-        width={51.8}
-        height={51.8}
-        sizes="100vw"
-        alt=""
-        src="/streamline-color-ai-network-spark1@2x.png"
-      />
+      </div>
+
       <LocofyFooter />
     </div>
   );
