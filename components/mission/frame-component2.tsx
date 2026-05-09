@@ -8,9 +8,9 @@ export type FrameComponent2Type = {
 const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
   return (
     <section
-      className={`self-stretch h-[764px] flex items-start pt-0 px-0 pb-[84px] box-border max-w-full ${className}`}
+      className={`self-stretch h-[764px] flex items-start pt-0 px-0 pb-0 box-border max-w-full ${className}`}
     >
-      <div className="self-stretch flex-1 bg-accent-3 flex flex-col items-start py-[202px] pl-[285px] pr-[284px] box-border relative isolate max-w-full">
+      <div className="self-stretch flex-1 bg-accent-3 flex flex-col items-start py-[202px] pl-[285px] pr-[284px] box-border relative max-w-full">
         <div className="w-[682px] h-[425.3px] absolute !!m-[0 important] top-[-112.6px] right-[-77px] shrink-0">
           <div className="absolute top-[195.9px] left-[0px] rounded-[140.3px] bg-accent-1 w-[473.9px] h-[88.6px]" />
           <div className="absolute top-[283.6px] left-[58.8px] rounded-[140.3px] bg-accent-1 w-[563.5px] h-[88.6px] z-[1]" />

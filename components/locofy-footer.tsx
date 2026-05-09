@@ -59,9 +59,9 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <div className="w-20 h-0.5 relative bg-white" />
               </div>
               <a href="/mission" className="self-stretch relative hover:underline">Our Mission</a>
-              <a href="/events" className="self-stretch relative hover:underline">Upcoming Events</a>
-              <a href="/calendar" className="self-stretch relative hover:underline">Calendar</a>
-              <a href="/contact" className="self-stretch h-5 relative flex items-center shrink-0 hover:underline">Contact</a>
+              <div className="self-stretch relative">Lorem</div>
+              <div className="self-stretch relative">Portal</div>
+              <div className="self-stretch h-5 relative flex items-center shrink-0">Estimate</div>
             </div>
             <div className="flex flex-col items-start gap-6 min-w-[220px]">
               <div className="self-stretch flex flex-col items-start gap-1.5 text-lg">
@@ -79,7 +79,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/mail.svg"
                 />
                 <div className="relative flex items-center flex-wrap break-all text-sm">
-                  hellothegoodscene@outlook.com
+                  mail@example.com
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -93,7 +93,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/phone-in-talk.svg"
                 />
                 <div className="relative flex items-center">
-                  (617) 959-9138
+                  (281) 222-2222
                 </div>
               </div>
               <div className="flex items-center gap-[11.7px]">
@@ -107,7 +107,9 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/location-on.svg"
                 />
                 <div className="relative">
-                  Boston, MA
+                  Lorem Ipsum third floor
+                  <br />
+                  Tx, Houstan
                 </div>
               </div>
             </div>

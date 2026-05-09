@@ -18,7 +18,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
                 Connection Over Crowds
               </h2>
             </div>
-            <div className="self-stretch relative text-lg font-[Poppins] text-subtext">
+            <div className="self-stretch relative text-lg font-[Poppins] text-[#666666]">
               We believe the best experiences aren’t defined by how many people
               attend, but by how they make you feel.
               <br />
@@ -29,7 +29,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
               connections happen effortlessly.
             </div>
             <div className="flex flex-col items-start pt-4 px-0 pb-0">
-              <button className="cursor-pointer [border:none] py-4 pl-8 pr-[30px] bg-accent-2 h-[52px] rounded-lg flex items-center justify-center box-border gap-1.5 hover:bg-[#524a4a]">
+              <button className="cursor-pointer [border:none] py-4 pl-8 pr-[30px] bg-[#2d2828] h-[52px] rounded-lg flex items-center justify-center box-border gap-1.5 hover:bg-[#524a4a]">
                 <div className="relative text-base font-medium font-[Poppins] text-white text-left shrink-0">
                   Explore Our Events
                 </div>
