@@ -16,21 +16,19 @@ export default function MissionPage() {
     <div className="w-full flex flex-col">
       {/* Hero */}
       <section className="relative bg-[#1e1513] overflow-visible pt-[120px] md:pt-[140px] pb-16 flex items-center min-h-[80vh]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-16 px-6 pt-32 pb-24 lg:grid-cols-[0.52fr_0.48fr]">
+        <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-20 px-6 pt-32 pb-24 overflow-visible">
 
-          {/* Left: Image stack */}
-          <div className="relative overflow-visible">
-            <div className="relative w-full max-w-[560px] h-[360px] overflow-visible">
-              <div className="absolute inset-0 z-10 rounded-[28px] bg-[#9b8ae6] rotate-[-4deg]" />
-              <div className="absolute left-8 top-8 z-0 h-full w-full rounded-[28px] bg-[#e7675b] rotate-[3deg]" />
-              <div className="relative z-20 h-full w-full rounded-[24px] overflow-hidden rotate-[-3deg]">
-                <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="560px" />
-              </div>
+          {/* Left: Image stack — fixed dimensions, shrink-0 */}
+          <div className="relative w-[620px] h-[390px] shrink-0 overflow-visible">
+            <div className="absolute inset-0 z-10 rounded-[28px] bg-[#9b8ae6] rotate-[-4deg]" />
+            <div className="absolute left-8 top-8 z-0 h-full w-full rounded-[28px] bg-[#e7675b] rotate-[3deg]" />
+            <div className="relative z-20 h-full w-full rounded-[24px] overflow-hidden rotate-[-3deg]">
+              <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="620px" />
             </div>
           </div>
 
           {/* Right: Text */}
-          <div className="relative z-30 max-w-[620px]">
+          <div className="relative z-30 max-w-[560px] shrink-0">
             <h1 className="font-['Playfair_Display'] italic text-[72px] leading-[1] text-white whitespace-nowrap font-bold">
               Our Mission
             </h1>
