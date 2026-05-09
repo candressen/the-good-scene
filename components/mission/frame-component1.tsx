@@ -8,14 +8,14 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   return (
     <div className={`mx-auto flex max-w-[1240px] items-center justify-between gap-12 px-6 py-20 w-full ${className}`}>
 
-      {/* LEFT: Image stack — balanced, not overpowering */}
-      <div className="relative w-[520px] h-[340px] flex-shrink-0 overflow-visible">
-        {/* Purple layer — back, rotate -3deg */}
-        <div className="absolute inset-0 rounded-[24px] bg-[#9b8ae6]" style={{ transform: 'rotate(-3deg)', zIndex: 1 }} />
-        {/* Coral layer — middle, rotate +3deg */}
-        <div className="absolute inset-0 rounded-[24px] bg-[#e7675b]" style={{ transform: 'rotate(3deg)', zIndex: 2 }} />
+      {/* LEFT: Image stack — overflow-visible, safe padding */}
+      <div className="relative w-[560px] h-[370px] overflow-visible p-4 flex-shrink-0">
+        {/* Purple — back */}
+        <div className="absolute inset-4 rounded-[24px] bg-[#9b8ae6]" style={{ transform: 'rotate(-4deg)', zIndex: 1 }} />
+        {/* Coral — middle */}
+        <div className="absolute top-8 left-8 h-full w-full rounded-[24px] bg-[#e7675b]" style={{ transform: 'rotate(3deg)', zIndex: 2 }} />
         {/* Image — top */}
-        <div className="absolute inset-0 rounded-[20px] overflow-hidden" style={{ zIndex: 3 }}>
+        <div className="relative z-10 h-full w-full rounded-[20px] overflow-hidden" style={{ transform: 'rotate(-3deg)' }}>
           <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="520px" />
         </div>
       </div>

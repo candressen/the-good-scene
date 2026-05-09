@@ -18,8 +18,8 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
         </div>
       </div>
 
-      {/* Center text */}
-      <div className="relative z-10 mx-auto max-w-[800px]">
+      {/* Center text — z-20 so it's above decorative card */}
+      <div className="relative z-20 mx-auto max-w-[820px]">
         <h2 className="text-[42px] md:text-[54px] italic font-bold font-['Playfair_Display'] leading-tight">
           Guided by Trust,<br />Not Trends
         </h2>
@@ -35,20 +35,20 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
         </div>
       </div>
 
-      {/* Bottom-right card — desktop */}
-      <div className="hidden lg:block absolute bottom-[80px] right-[120px]" style={{ transform: 'rotate(6deg)', zIndex: 2 }}>
+      {/* Bottom-right card — desktop, z-10 (below text z-20) */}
+      <div className="hidden lg:block absolute bottom-[55px] right-[70px] z-10" style={{ transform: 'rotate(6deg)' }}>
         <div className="bg-white p-[6px] rounded-[16px] shadow-lg">
-          <div className="relative rounded-[12px] overflow-hidden" style={{ width: '280px', height: '170px' }}>
-            <Image src="/mission-trust-bottomright.png" alt="" fill className="object-cover" sizes="280px" />
+          <div className="relative rounded-[12px] overflow-hidden" style={{ width: '260px', height: '155px' }}>
+            <Image src="/mission-trust-bottomright.png" alt="" fill className="object-cover" sizes="260px" />
           </div>
         </div>
       </div>
 
-      {/* Bottom-right card — mobile */}
-      <div className="lg:hidden relative mx-auto mt-10" style={{ transform: 'rotate(3deg)', width: '300px' }}>
+      {/* Mobile card — stacked below text */}
+      <div className="relative z-10 mx-auto mt-10 lg:hidden" style={{ transform: 'rotate(3deg)', width: '280px' }}>
         <div className="bg-white p-[6px] rounded-[16px] shadow-lg">
-          <div className="relative rounded-[12px] overflow-hidden" style={{ width: '100%', height: '170px' }}>
-            <Image src="/mission-trust-bottomright.png" alt="" fill className="object-cover" sizes="300px" />
+          <div className="relative rounded-[12px] overflow-hidden" style={{ width: '100%', height: '155px' }}>
+            <Image src="/mission-trust-bottomright.png" alt="" fill className="object-cover" sizes="280px" />
           </div>
         </div>
       </div>
