@@ -16,11 +16,11 @@ export default function MissionPage() {
     <div className="w-full flex flex-col">
       {/* Hero */}
       <section className="relative bg-[#1e1513] overflow-hidden">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-16 px-6 py-24 lg:grid-cols-[0.52fr_0.48fr]">
+        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-16 px-6 pt-32 pb-24 lg:grid-cols-[0.52fr_0.48fr]">
 
           {/* Left: Image stack */}
           <div className="relative overflow-visible">
-            <div className="relative w-full max-w-[560px] h-[360px] overflow-visible">
+            <div className="relative w-full max-w-[540px] h-[340px] overflow-visible">
               {/* Purple — back */}
               <div className="absolute inset-0 z-10 rounded-[26px] bg-[#9b8ae6]"
                 style={{ transform: 'rotate(-4deg)' }} />
