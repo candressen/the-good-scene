@@ -15,10 +15,10 @@ export default function Nav() {
   return (
     <>
       {/* Desktop nav */}
-      <header className='fixed top-5 left-1/2 z-50 hidden w-[calc(100%-48px)] max-w-[1360px] -translate-x-1/2 lg:block'>
-        <div className='flex h-[72px] items-center justify-between rounded-[18px] bg-white px-10 shadow-sm border border-[#e3e2dd]'>
+      <header className='fixed left-1/2 top-6 z-50 hidden w-[calc(100%-48px)] max-w-[1360px] -translate-x-1/2 lg:block'>
+        <div className='mx-auto flex h-[72px] max-w-[1360px] items-center justify-between rounded-[18px] bg-white px-8 shadow-sm md:px-10'>
           <Link href='/' className='flex items-center'>
-            <Image src='/logos/logo.svg' alt='The Good Scene' width={160} height={42} className='h-[42px] w-auto object-contain' priority />
+            <Image src='/logos/logo.svg' alt='The Good Scene' width={160} height={42} className='h-[46px] max-w-[120px] object-contain' priority />
           </Link>
           <nav className='hidden items-center gap-10 lg:flex'>
             {navLinks.map(l => (

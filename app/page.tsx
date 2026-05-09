@@ -8,10 +8,10 @@ import LocofyFooter from "@/components/locofy-footer";
 
 const HomePage: NextPage = () => {
   return (
-    <div className="w-full overflow-x-hidden bg-[#1e1513] flex flex-col">
+    <div className="w-full overflow-x-hidden bg-[#e9ebe4] flex flex-col">
 
       {/* Hero */}
-      <section className="relative min-h-[620px] w-full overflow-hidden bg-[#1e1513] pt-[120px] md:min-h-[680px] lg:min-h-[720px]">
+      <section className="relative min-h-[620px] w-full overflow-hidden bg-[#e9ebe4] pt-[120px] md:min-h-[680px] lg:min-h-[720px]">
         <Image
           src="/hero-section.png"
           alt=""
