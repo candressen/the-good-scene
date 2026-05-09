@@ -93,7 +93,7 @@ function EventModal({ event, onClose }: { event: Event; onClose: () => void }) {
         <button onClick={onClose} className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full bg-[#e76255] text-white text-xl font-bold hover:bg-[#d15545] z-10">×</button>
 
         {/* Logo */}
-        <Image src="/logos/logo.svg" alt="The Good Scene" width={180} height={72} className="mb-8 h-[72px] w-auto object-contain scale-[1.25] origin-left" />
+        <Image src="/logos/logo.svg" alt="The Good Scene" width={180} height={72} className="mb-8 h-[96px] w-auto object-contain scale-[1.4] origin-left" />
 
         {/* Main card */}
         <div className="rounded-[16px] bg-[#f1f1f1] p-6">
