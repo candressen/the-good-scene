@@ -34,7 +34,7 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
       </div>
 
       {/* Center text */}
-      <section className="absolute top-[calc(50%_-_211px)] left-[calc(50%_-_435px)] w-[871px] flex flex-col items-center gap-[38.5px] max-w-full text-center text-[48px] text-white font-['Playfair_Display']">
+      <section className="relative z-10 mx-auto flex max-w-[700px] flex-col items-center gap-8 text-center text-white font-['Playfair_Display']">
         <div className="flex items-center justify-center py-0 px-5">
           <h1 className="m-0 relative text-[length:inherit] capitalize italic font-bold font-[inherit]">
             Guided by Trust,
@@ -62,7 +62,7 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
       </section>
 
       {/* Bottom-right card - lower right, decorative */}
-      <div className="absolute right-[90px] bottom-[35px] bg-white p-[6px] rounded-[16px]"
+      <div className="hidden lg:block absolute right-[90px] bottom-[70px] bg-white p-[6px] rounded-[16px]"
         style={{ transform: "rotate(5deg)", zIndex: 2, boxShadow: "0 12px 30px rgba(0,0,0,0.2)" }}>
         <div className="relative rounded-[12px] overflow-hidden" style={{ width: "300px", height: "180px" }}>
           <Image

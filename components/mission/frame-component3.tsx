@@ -8,17 +8,17 @@ export type FrameComponent3Type = {
 const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
   return (
     <section
-      className={`w-[1423px] flex items-start pt-0 px-[60px] pb-[83.4px] box-border max-w-full ${className}`}
+      className={`w-full bg-[#e9ebe4] px-6 py-20 ${className}`}
     >
-      <div className="flex-1 flex items-end gap-[58px] max-w-full lg:flex-wrap">
-        <section className="flex-1 flex flex-col items-start pt-0 px-0 pb-16 box-border min-w-[438px] min-h-[449px] max-w-full text-left text-5xl text-accent-2 font-['Playfair_Display']">
+      <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <section className="flex flex-col items-start text-left text-[#1e1513] font-['Playfair_Display']">
           <div className="self-stretch flex flex-col items-start gap-[30px]">
             <div className="flex items-center justify-center">
-              <h2 className="m-0 relative text-[length:inherit] capitalize italic font-bold font-[inherit]">
+              <h2 className="m-0 text-[42px] md:text-[54px] italic font-bold leading-tight">
                 Connection Over Crowds
               </h2>
             </div>
-            <div className="self-stretch relative text-lg font-[Poppins] text-[#666666]">
+            <div className="mt-4 text-[16px] leading-[1.65] text-[#1e1513]/80 font-[Poppins]">
               We believe the best experiences aren’t defined by how many people
               attend, but by how they make you feel.
               <br />

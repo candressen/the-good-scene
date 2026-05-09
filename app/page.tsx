@@ -8,7 +8,7 @@ import LocofyFooter from "@/components/locofy-footer";
 
 const HomePage: NextPage = () => {
   return (
-    <div className="w-full overflow-x-hidden bg-[#e9ebe4] flex flex-col">
+    <div className="w-full max-w-full overflow-x-hidden bg-[#e9ebe4] flex flex-col">
 
       {/* Hero */}
       <section className="relative min-h-[620px] w-full overflow-hidden bg-[#e9ebe4] pt-[120px] md:min-h-[680px] lg:min-h-[720px]">

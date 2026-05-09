@@ -16,16 +16,16 @@ export default function Nav() {
     <>
       {/* Desktop nav */}
       <header className='fixed left-1/2 top-6 z-50 hidden w-[calc(100%-48px)] max-w-[1360px] -translate-x-1/2 lg:block'>
-        <div className='mx-auto flex h-[72px] max-w-[1360px] items-center justify-between rounded-[18px] bg-white px-8 shadow-sm md:px-10'>
-          <Link href='/' className='flex items-center'>
-            <Image src='/logos/logo.svg' alt='The Good Scene' width={160} height={42} className='h-[46px] max-w-[120px] object-contain' priority />
+        <div className='mx-auto flex h-[76px] max-w-[1360px] items-center justify-between rounded-[18px] bg-white px-10 shadow-sm'>
+          <Link href='/' className='flex min-w-[180px] items-center'>
+            <Image src='/logos/logo.svg' alt='The Good Scene' width={160} height={42} className='h-[46px] w-auto max-w-[135px] object-contain' priority />
           </Link>
           <nav className='hidden items-center gap-10 lg:flex'>
             {navLinks.map(l => (
               <Link key={l.label} href={l.href} className='text-[18px] font-medium text-[#1e1513] leading-none hover:text-[#a791e3] transition-colors'>{l.label}</Link>
             ))}
           </nav>
-          <div className='hidden items-center gap-4 md:flex'>
+          <div className='hidden min-w-[320px] items-center justify-end gap-4 md:flex'>
             <Link href='/events' className='rounded-[14px] bg-[#1e1513] px-8 py-4 text-[16px] font-semibold text-white hover:bg-black transition-colors'>Get Started</Link>
             <Link href='/contact' className='rounded-[14px] border-2 border-[#1e1513] bg-white px-8 py-4 text-[16px] font-semibold text-[#1e1513] hover:bg-[#1e1513] hover:text-white transition-colors'>Contact Us</Link>
           </div>

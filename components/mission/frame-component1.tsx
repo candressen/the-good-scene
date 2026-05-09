@@ -10,7 +10,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
     <div className={`self-stretch flex items-center justify-between max-w-[1150px] mx-auto px-6 py-16 gap-[60px] shrink-0 w-full ${className}`}>
 
       {/* LEFT: Image stack — dominant, pulled left */}
-      <div className="relative w-[560px] h-[380px] ml-0 overflow-visible flex-shrink-0">
+      <div className="relative w-[620px] h-[400px] ml-0 overflow-visible flex-shrink-0">
 
         {/* Coral — bottom, rotate -6deg, scale 1.08, peek down */}
         <div className="absolute inset-0 bg-[#E46A5A] rounded-[32px]"

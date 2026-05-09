@@ -8,7 +8,7 @@ const EventHighlights: NextPage<{ className?: string }> = ({ className = "" }) =
   return (
     <div className={`w-full bg-[#e9ebe4] px-6 py-16 overflow-hidden ${className}`}>
       <div className="mx-auto max-w-[1180px]">
-        <h2 className="mb-10 text-center font-['Playfair_Display'] italic text-[42px] leading-tight text-[#1e1513] md:text-[56px]">
+        <h2 className="mb-10 text-center font-['Playfair_Display'] italic text-[46px] leading-tight text-[#1e1513] md:text-[58px]">
           Weekly Drop
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
