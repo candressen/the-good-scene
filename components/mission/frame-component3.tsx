@@ -45,19 +45,24 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-start pt-[80.3px] pb-[103px] pl-[72px] pr-[57px] box-border max-w-full lg:flex-1">
-          <div className="self-stretch flex items-start relative isolate max-w-full">
-            <div className="h-full w-full absolute !!m-[0 important] bottom-[-112.05px] left-[-72.3px] rounded-[19.8px] bg-accent-3 [transform:_rotate(-13.7deg)] [transform-origin:0_0] shrink-0" />
-            <div className="h-full w-full absolute !!m-[0 important] top-[324.63px] right-[-438.18px] rounded-[19.8px] bg-accent-1 [transform:_rotate(-169.4deg)] [transform-origin:0_0] z-[1] shrink-0" />
-            <Image
-              className="h-[329.6px] flex-1 relative rounded-[19.8px] max-w-full overflow-hidden object-cover z-[2] shrink-0"
-              loading="lazy"
-              width={440.8}
-              height={329.6}
-              sizes="100vw"
-              alt=""
-              src="/Rectangle-16@2x.png"
-            />
+        <section className="flex items-center justify-center pt-8 pb-8 pl-8 pr-8 max-w-full lg:flex-1">
+          <div className="relative w-[420px] h-[280px]">
+            {/* Purple layer */}
+            <div className="absolute inset-0 bg-[#9b7fa6] rounded-[24px]"
+              style={{ transform: "rotate(4deg)", zIndex: 1 }} />
+            {/* Coral layer */}
+            <div className="absolute inset-0 bg-[#e7675b] rounded-[24px]"
+              style={{ transform: "rotate(8deg)", zIndex: 0 }} />
+            {/* Image */}
+            <div className="absolute inset-0 rounded-[20px] overflow-hidden shadow-lg" style={{ zIndex: 2 }}>
+              <Image
+                fill
+                className="object-cover"
+                sizes="420px"
+                alt=""
+                src="/Rectangle-16@2x.png"
+              />
+            </div>
           </div>
         </section>
       </div>

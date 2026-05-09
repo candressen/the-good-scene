@@ -7,39 +7,41 @@ export type FrameComponent1Type = {
 
 const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   return (
-    <div className={`self-stretch flex items-center py-0 pl-[62px] pr-[62px] box-border gap-[60px] shrink-0 max-w-full h-full ${className}`}>
+    <div className={`self-stretch flex items-center justify-between max-w-[1150px] mx-auto px-6 py-16 gap-[60px] shrink-0 w-full ${className}`}>
 
-      {/* LEFT: Image stack — tighter, more dynamic rotation */}
-      <div className="relative flex-shrink-0" style={{ width: '520px', height: '460px' }}>
+      {/* LEFT: Image stack — dominant, pulled left */}
+      <div className="relative w-[520px] h-[360px] -ml-6 mt-2 flex-shrink-0">
 
-        {/* 1. Coral — BACK, smaller, rotated +4deg, bottom-right, peeks not dominates */}
-        <div className="absolute bg-[#e7675b] rounded-[24px]"
-          style={{ width: '460px', height: '380px', bottom: '-15px', right: '-20px', transform: 'rotate(4deg)', zIndex: 1 }} />
+        {/* Coral — bottom, rotate -6deg, scale 1.08, peek down */}
+        <div className="absolute inset-0 bg-[#E46A5A] rounded-[32px]"
+          style={{ transform: 'rotate(-6deg) scale(1.08) translateY(24px)', zIndex: 1 }} />
 
-        {/* 2. Purple — MIDDLE, slightly rotated -3deg, visible strip top-left */}
-        <div className="absolute bg-[#a791e3] rounded-[24px]"
-          style={{ width: '460px', height: '380px', top: '-15px', left: '-15px', transform: 'rotate(-3deg)', zIndex: 2 }} />
+        {/* Purple — middle, rotate -3deg, scale 1.04 */}
+        <div className="absolute inset-0 bg-[#9B8AE6] rounded-[32px]"
+          style={{ transform: 'rotate(-3deg) scale(1.04)', zIndex: 2 }} />
 
-        {/* 3. Image — TOP, -7deg tilt, inset from edges */}
-        <div className="absolute rounded-[20px] overflow-hidden shadow-xl"
-          style={{ width: '440px', height: '360px', top: '30px', left: '25px', transform: 'rotate(-7deg)', zIndex: 3 }}>
-          <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="440px" />
+        {/* Image — top, rotate -4deg, shadow */}
+        <div className="absolute inset-0 rounded-[28px] overflow-hidden"
+          style={{ transform: 'rotate(-4deg)', zIndex: 3, boxShadow: '0 20px 40px rgba(0,0,0,0.25)' }}>
+          <Image src="/mission-hero-photo.png" alt="Our Mission" fill className="object-cover" sizes="520px" />
         </div>
       </div>
 
-      {/* RIGHT: Text — closer to image, tighter spacing */}
-      <section className="flex flex-col items-start gap-4 flex-1 text-left text-[52px] text-white font-['Playfair_Display'] pt-[60px] pb-[40px]">
-        <h1 className="m-0 text-[length:inherit] italic font-bold leading-tight">Our Mission</h1>
-        <p className="m-0 text-[17px] font-['Poppins'] text-white/80 leading-relaxed max-w-[460px]">
+      {/* RIGHT: Text — closer to image */}
+      <div className="max-w-[520px] ml-4 flex flex-col items-start">
+        <h1 className="text-[56px] leading-[1.1] font-['Playfair_Display'] italic font-bold text-white mb-5">
+          Our Mission
+        </h1>
+        <p className="text-[18px] leading-[1.6] font-['Poppins'] text-white/80 mb-6 max-w-[460px]">
           We&apos;re building a more thoughtful way to experience social life — one
           that values intention, comfort, and meaningful connection over noise
           and volume.
         </p>
-        <button className="cursor-pointer border-none mt-1 py-3.5 pl-8 pr-[30px] bg-white h-[52px] rounded-lg flex items-center justify-center gap-2 hover:bg-[#e6e6e6]">
-          <span className="text-[16px] font-medium font-['Poppins'] text-[#1e1716]">Explore More</span>
-          <Image className="w-[33px] h-[33px] object-contain" width={33} height={33} alt="" src="/Icon7@2x.png" />
+        <button className="cursor-pointer border-none flex items-center gap-3 bg-white text-[#1e1716] px-6 py-3 rounded-full text-[16px] font-medium font-['Poppins'] hover:bg-[#e6e6e6]">
+          Explore More
+          <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1e1716] text-white text-xs">→</span>
         </button>
-      </section>
+      </div>
     </div>
   );
 };
