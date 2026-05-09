@@ -10,12 +10,12 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
     <section
       className={`self-stretch h-[764px] flex items-start pt-0 px-0 pb-0 box-border max-w-full ${className}`}
     >
-      <div className="self-stretch flex-1 bg-accent-3 flex flex-col items-start py-[202px] pl-[285px] pr-[284px] box-border relative max-w-full">
+      <div className="self-stretch flex-1 bg-[#9b7fa6] flex flex-col items-start py-[202px] pl-[285px] pr-[284px] box-border relative max-w-full">
         <div className="w-[682px] h-[425.3px] absolute !!m-[0 important] top-[-112.6px] right-[-77px] shrink-0">
-          <div className="absolute top-[195.9px] left-[0px] rounded-[140.3px] bg-accent-1 w-[473.9px] h-[88.6px]" />
-          <div className="absolute top-[283.6px] left-[58.8px] rounded-[140.3px] bg-accent-1 w-[563.5px] h-[88.6px] z-[1]" />
-          <div className="absolute top-[111.9px] left-[207.1px] rounded-[140.3px] bg-accent-1 w-[474.9px] h-[88.6px] z-[1]" />
-          <div className="absolute top-[336.6px] left-[183px] rounded-[140.3px] bg-accent-1 w-[474.9px] h-[88.6px] z-[2]" />
+          <div className="absolute top-[195.9px] left-[0px] rounded-[140.3px] bg-[#e7675b] w-[473.9px] h-[88.6px]" />
+          <div className="absolute top-[283.6px] left-[58.8px] rounded-[140.3px] bg-[#e7675b] w-[563.5px] h-[88.6px] z-[1]" />
+          <div className="absolute top-[111.9px] left-[207.1px] rounded-[140.3px] bg-[#e7675b] w-[474.9px] h-[88.6px] z-[1]" />
+          <div className="absolute top-[336.6px] left-[183px] rounded-[140.3px] bg-[#e7675b] w-[474.9px] h-[88.6px] z-[2]" />
           <Image
             className="absolute top-[0px] left-[72.8px] w-[559.8px] h-[372.3px] object-cover z-[3]"
             loading="lazy"
@@ -27,9 +27,9 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
           />
         </div>
         <div className="w-[644.1px] h-[418.5px] absolute !!m-[0 important] bottom-[-0.5px] left-[-121.1px] shrink-0">
-          <div className="absolute top-[235px] left-[152.5px] rounded-[145.2px] bg-accent-1 w-[491.6px] h-[91.7px]" />
-          <div className="absolute top-[143.3px] left-[36.6px] rounded-[145.2px] bg-accent-1 w-[491.6px] h-[91.7px]" />
-          <div className="absolute top-[326.7px] left-[92.7px] rounded-[145.2px] bg-accent-1 w-[490.6px] h-[91.7px]" />
+          <div className="absolute top-[235px] left-[152.5px] rounded-[145.2px] bg-[#e7675b] w-[491.6px] h-[91.7px]" />
+          <div className="absolute top-[143.3px] left-[36.6px] rounded-[145.2px] bg-[#e7675b] w-[491.6px] h-[91.7px]" />
+          <div className="absolute top-[326.7px] left-[92.7px] rounded-[145.2px] bg-[#e7675b] w-[490.6px] h-[91.7px]" />
           <Image
             className="absolute h-full top-[0px] bottom-[0px] left-[0px] max-h-full w-[627.7px] object-cover z-[1]"
             width={627.7}
