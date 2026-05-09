@@ -61,19 +61,18 @@ const Section: NextPage<SectionType> = ({ className = "" }) => {
         </div>
       </section>
 
-      {/* Bottom-right cluster */}
-      <div className="absolute top-[406.6px] left-[1037px] w-[371.1px] h-64">
-        {/* White frame behind */}
-        <div className="absolute inset-0 bg-white rounded-[16px]" style={{ transform: 'rotate(3deg)', zIndex: 1 }} />
-        {/* Main image */}
-        <Image
-          className="absolute top-[5px] left-[5px] w-[346.1px] h-[223.3px] object-cover rounded-[12px] z-[2]"
-          width={346.1}
-          height={223.3}
-          sizes="346px"
-          alt=""
-          src="/mission-trust-bottomright.png"
-        />
+      {/* Bottom-right card - lower right, decorative */}
+      <div className="absolute right-[90px] bottom-[35px] bg-white p-[6px] rounded-[16px]"
+        style={{ transform: "rotate(5deg)", zIndex: 2, boxShadow: "0 12px 30px rgba(0,0,0,0.2)" }}>
+        <div className="relative rounded-[12px] overflow-hidden" style={{ width: "300px", height: "180px" }}>
+          <Image
+            fill
+            className="object-cover"
+            sizes="300px"
+            alt=""
+            src="/mission-trust-bottomright.png"
+          />
+        </div>
       </div>
     </section>
   );
