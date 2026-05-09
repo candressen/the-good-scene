@@ -6,9 +6,9 @@ import { useState } from 'react'
 
 const navLinks = [
   { label: 'Our Mission', href: '/mission' },
-  { label: 'Upcoming Events', href: '/events' },
+  { label: 'Lorem', href: '/events' },
   { label: 'Calendar', href: '/calendar' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Portal', href: '/contact' },
 ]
 
 export default function Nav() {
