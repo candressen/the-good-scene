@@ -18,7 +18,7 @@ export default function Nav() {
       <header className='fixed left-1/2 top-6 z-50 hidden w-[calc(100%-48px)] -translate-x-1/2 lg:block'>
         <div className='mx-auto flex h-[88px] max-w-[1240px] items-center justify-between rounded-[18px] bg-white px-8 shadow-sm'>
           <div className='flex items-center min-w-[220px]'>
-            <Link href='/'><Image src='/logos/logo.svg' alt='The Good Scene' width={160} height={46} className='h-[66px] w-auto object-contain scale-[1.1] origin-left' priority /></Link>
+            <Link href='/'><Image src='/logos/logo.svg' alt='The Good Scene' width={160} height={46} className='h-[76px] w-auto object-contain scale-[1.15] origin-left' priority /></Link>
           </div>
           <nav className='hidden items-center gap-10 lg:flex'>
             {navLinks.map(l => <Link key={l.label} href={l.href} className='text-[18px] font-medium text-[#1e1513] hover:text-[#a791e3] transition-colors'>{l.label}</Link>)}
