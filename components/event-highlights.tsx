@@ -1,6 +1,7 @@
 "use client";
 import type { NextPage } from "next";
 import { useState } from "react";
+import Link from "next/link";
 import EventInstances from "./event-instances";
 
 const EventHighlights: NextPage<{ className?: string }> = ({ className = "" }) => {
@@ -15,9 +16,9 @@ const EventHighlights: NextPage<{ className?: string }> = ({ className = "" }) =
           {items.map((_, i) => <EventInstances key={i} />)}
         </div>
         <div className="mt-10 flex justify-center">
-          <button className="cursor-pointer border-none rounded-full bg-[#1e1513] px-7 py-3 text-[14px] font-semibold text-white hover:bg-black">
+          <Link href="/events" className="rounded-full bg-[#1e1513] px-7 py-3 text-[14px] font-semibold text-white hover:bg-black">
             View More
-          </button>
+          </Link>
         </div>
       </div>
     </div>

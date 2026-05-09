@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 const FrameComponent: NextPage<{ className?: string }> = ({ className = "" }) => {
   return (
@@ -12,10 +13,10 @@ const FrameComponent: NextPage<{ className?: string }> = ({ className = "" }) =>
       <p className="mt-5 max-w-[760px] text-[18px] leading-[1.55] text-white/90 md:text-[22px] max-sm:max-w-[340px] max-sm:text-[15px]">
         Skip the noise and explore a curated collection of events that prioritize quality, atmosphere, and genuine connection.
       </p>
-      <button className="mt-8 cursor-pointer border-none inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-[16px] font-semibold text-[#1e1513] shadow-sm hover:bg-[#f0f0f0] font-['Poppins']">
+      <Link href="/events" className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-[17px] font-semibold text-[#1e1513] shadow-sm hover:bg-[#f0f0f0] font-['Poppins']">
         Explore Now
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#1e1513] text-sm text-white">→</span>
-      </button>
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1e1513] text-white">→</span>
+      </Link>
     </div>
   );
 };

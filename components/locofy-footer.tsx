@@ -17,7 +17,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
             <div className="self-stretch flex flex-col items-start gap-[16.3px]">
               <div className="flex items-start py-0 px-1.5">
                 <Image
-                  className="h-[58px] w-auto object-contain"
+                  className="h-[46px] w-auto object-contain"
                   loading="lazy"
                   width={200}
                   height={82.7}
