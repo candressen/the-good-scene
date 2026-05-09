@@ -1,9 +1,7 @@
-import { getAllEvents } from '@/lib/airtable'
 import { NextResponse } from 'next/server'
-
-export const revalidate = 60
+import { fetchEvents } from '@/lib/airtable'
 
 export async function GET() {
-  const events = await getAllEvents()
+  const events = await fetchEvents()
   return NextResponse.json(events)
 }

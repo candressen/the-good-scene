@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import LocofyFooter from '@/components/locofy-footer'
@@ -79,10 +79,17 @@ function EventModal({ event, onClose }: { event: Event; onClose: () => void }) {
       phone: form.phone,
       notes: form.notes,
     }
-    // TODO: connect to Supabase — insert into event_reservations
-    console.log('Reservation payload:', payload)
-    await new Promise(r => setTimeout(r, 800)) // simulate async
-    setReserveState('success')
+    const res = await fetch('/api/reservations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    if (res.ok) {
+      setReserveState('success')
+    } else {
+      setReserveState('form')
+      alert('Something went wrong. Please try again.')
+    }
   }
 
   return (
@@ -202,8 +209,33 @@ export default function EventsPage() {
   const [activeFilter, setActiveFilter] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null)
+  const [events, setEvents] = useState<Event[]>(EVENTS)
 
-  const filtered = EVENTS.filter(e => {
+  // Fetch live events from Airtable
+  useEffect(() => {
+    fetch('/api/events')
+      .then(r => r.json())
+      .then((data: Array<{id:string;name:string;date:string;time:string;location:string;description:string;tags:string[];category:string}>) => {
+        if (data && data.length > 0) {
+          setEvents(data.map(e => ({
+            id: e.id,
+            title: e.name,
+            date: e.date,
+            time: e.time,
+            location: e.location,
+            description: e.description,
+            tags: e.tags,
+            category: e.category,
+            image: '/Rectangle-64@2x.png', // default image until Airtable has image field
+            venue: e.location,
+            address: e.location,
+          })))
+        }
+      })
+      .catch(() => {}) // silent fallback to hardcoded
+  }, [])
+
+  const filtered = events.filter(e => {
     const matchesFilter = activeFilter === 'All' || e.tags.includes(activeFilter)
     const q = searchQuery.toLowerCase().trim()
     const matchesSearch = q === '' ||
