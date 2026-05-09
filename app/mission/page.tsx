@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function MissionPage() {
   return (
-    <div className="w-full relative bg-background overflow-hidden flex flex-col items-start leading-[normal] tracking-[normal]">
-      <main className="self-stretch min-h-[760px] bg-[#2d2828] shrink-0 flex flex-col items-start pt-0 px-0 pb-0 box-border max-w-full">
+    <div className="w-full relative bg-background flex flex-col items-start leading-[normal] tracking-[normal]">
+      <main className="self-stretch h-[760px] bg-[#1e1716] shrink-0 flex items-start pt-0 px-0 pb-0 max-w-full overflow-visible">
         <FrameComponent1 />
       </main>
       <FrameComponent2 />

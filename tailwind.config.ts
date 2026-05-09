@@ -14,7 +14,9 @@ export default {
       },
       colors: {
         background: '#f5f5f5',
+        'accent-1': '#e7675b',
         'accent-2': '#2d2828',
+        'accent-3': '#9b7fa6',
         'accent-coral': '#e06666',
         'accent-purple': '#7c3aed',
       },
