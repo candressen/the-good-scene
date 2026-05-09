@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import LocofyFooter from '@/components/locofy-footer'
-import FrameComponent from '@/components/mission/frame-component'
 import FrameComponent1 from '@/components/mission/frame-component1'
 import FrameComponent2 from '@/components/mission/frame-component2'
 import FrameComponent3 from '@/components/mission/frame-component3'
@@ -14,8 +13,7 @@ export const metadata: Metadata = {
 export default function MissionPage() {
   return (
     <div className="w-full relative bg-background overflow-hidden flex flex-col items-start leading-[normal] tracking-[normal]">
-      <main className="self-stretch min-h-[760px] bg-[#2d2828] overflow-hidden shrink-0 flex flex-col items-start pt-0 px-0 pb-0 box-border max-w-full">
-        <FrameComponent />
+      <main className="self-stretch min-h-[760px] bg-[#2d2828] shrink-0 flex flex-col items-start pt-0 px-0 pb-0 box-border max-w-full">
         <FrameComponent1 />
       </main>
       <FrameComponent2 />
