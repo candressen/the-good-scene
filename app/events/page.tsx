@@ -1,20 +1,49 @@
-import type { Metadata } from 'next'
+'use client'
+import { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import LocofyFooter from '@/components/locofy-footer'
-import FrameComponent5 from '@/components/events/frame-component5'
-import EventCards from '@/components/events/event-cards'
 
-export const metadata: Metadata = {
-  title: 'Upcoming Events',
-  description: 'Explore a curated selection of upcoming experiences.',
-}
+const FILTERS = [
+  'All', 'Woman Only', 'Arts & Crafts', 'No Drinking', 'Reggaeton',
+  'Classy', 'Wine & Gossip', 'Rooftop Views', 'Pop-up', 'Singles'
+]
+
+const EVENTS = [
+  { title: 'Rooftop Social Night', date: 'Fri, Mar 15', time: '10:15 PM', location: 'Downtown', description: 'An easygoing evening with music, drinks, and a welcoming crowd.', tags: ['Rooftop Views', 'Classy'], image: '/Rectangle-64@2x.png' },
+  { title: 'Wine & Gossip Evening', date: 'Sat, Mar 16', time: '7:00 PM', location: 'Midtown', description: 'A relaxed gathering for good wine and great conversation.', tags: ['Wine & Gossip', 'Classy'], image: '/Rectangle-65@2x.png' },
+  { title: 'Ladies Night Out', date: 'Fri, Mar 22', time: '9:00 PM', location: 'Back Bay', description: 'A curated evening designed for women to connect and unwind.', tags: ['Woman Only', 'Classy'], image: '/Rectangle-61@2x.png' },
+  { title: 'Arts & Crafts Mixer', date: 'Sun, Mar 23', time: '3:00 PM', location: 'South End', description: 'Get creative while meeting new people in a laid-back setting.', tags: ['Arts & Crafts', 'No Drinking'], image: '/Rectangle-62@2x.png' },
+  { title: 'Reggaeton Night', date: 'Sat, Mar 29', time: '11:00 PM', location: 'Seaport', description: 'Dance the night away to the best reggaeton beats in town.', tags: ['Reggaeton'], image: '/Rectangle-63@2x.png' },
+  { title: 'Singles Mixer', date: 'Fri, Apr 4', time: '7:30 PM', location: 'Beacon Hill', description: 'Meet new people in a fun and pressure-free environment.', tags: ['Singles'], image: '/Rectangle-64@2x.png' },
+  { title: 'Pop-up Garden Party', date: 'Sat, Apr 5', time: '2:00 PM', location: 'Cambridge', description: 'A surprise pop-up in a beautiful garden setting.', tags: ['Pop-up', 'No Drinking'], image: '/Rectangle-65@2x.png' },
+  { title: 'Classy Rooftop Brunch', date: 'Sun, Apr 6', time: '11:00 AM', location: 'Downtown', description: 'Brunch with a view and a side of great company.', tags: ['Rooftop Views', 'Classy', 'Woman Only'], image: '/Rectangle-61@2x.png' },
+  { title: 'Sober Social Night', date: 'Fri, Apr 11', time: '8:00 PM', location: 'Jamaica Plain', description: 'Connect authentically without the noise of alcohol.', tags: ['No Drinking', 'Singles'], image: '/Rectangle-62@2x.png' },
+  { title: 'Crafts & Cocktails', date: 'Sat, Apr 12', time: '6:00 PM', location: 'Allston', description: 'A creative night with optional cocktails and good vibes.', tags: ['Arts & Crafts'], image: '/Rectangle-63@2x.png' },
+  { title: 'Gossip & Glam', date: 'Fri, Apr 18', time: '9:00 PM', location: 'Fenway', description: 'Dress up, show up, and dish out.', tags: ['Wine & Gossip', 'Woman Only'], image: '/Rectangle-64@2x.png' },
+  { title: 'Latin Nights', date: 'Sat, Apr 19', time: '10:00 PM', location: 'North End', description: 'Salsa, bachata, and reggaeton all night long.', tags: ['Reggaeton'], image: '/Rectangle-65@2x.png' },
+]
 
 export default function EventsPage() {
+  const [activeFilter, setActiveFilter] = useState('All')
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const filtered = EVENTS.filter(e => {
+    const matchesFilter = activeFilter === 'All' || e.tags.includes(activeFilter)
+    const q = searchQuery.toLowerCase().trim()
+    const matchesSearch = q === '' ||
+      e.title.toLowerCase().includes(q) ||
+      e.description.toLowerCase().includes(q) ||
+      e.location.toLowerCase().includes(q) ||
+      e.tags.some(t => t.toLowerCase().includes(q))
+    return matchesFilter && matchesSearch
+  })
+
   return (
     <div className="min-h-screen w-full bg-[#e9ebe4] overflow-x-hidden flex flex-col">
 
-      {/* Hero header */}
-      <section className="relative mx-auto max-w-[1180px] w-full px-6 pt-[130px] pb-8 text-center">
-        {/* Decorative label */}
+      {/* Hero */}
+      <section className="relative mx-auto w-full max-w-[1180px] px-6 pt-[130px] pb-8 text-center">
         <p className="absolute left-8 top-[130px] hidden text-[13px] uppercase tracking-[0.25em] text-[#9b8ae6] lg:block">
           Mark Your Calendar
         </p>
@@ -26,14 +55,67 @@ export default function EventsPage() {
         </p>
       </section>
 
-      {/* Search bar + filter chips (Locofy) */}
-      <div className="self-stretch flex items-start justify-end py-0 px-[50px] box-border max-w-full mq1350:px-6">
-        <FrameComponent5 />
+      {/* Search bar */}
+      <div className="mx-auto mt-8 flex h-[52px] w-full max-w-[560px] items-center rounded-full bg-white px-5 shadow-[0_8px_24px_rgba(0,0,0,0.12)] mx-6 sm:mx-auto">
+        <svg className="mr-3 h-4 w-4 flex-shrink-0 text-[#1e1513]/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        <input
+          type="text"
+          placeholder="Search"
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
+          className="w-full bg-transparent text-[14px] text-[#1e1513] outline-none placeholder:text-[#1e1513]/40 font-['Poppins']"
+        />
+      </div>
+
+      {/* Filter chips */}
+      <div className="mx-auto mt-6 flex max-w-[1180px] flex-wrap items-center justify-center gap-3 px-6">
+        {FILTERS.map(f => (
+          <button
+            key={f}
+            onClick={() => setActiveFilter(f)}
+            className={`rounded-full px-5 py-2 text-[13px] font-semibold transition font-['Poppins'] ${
+              activeFilter === f
+                ? 'bg-[#e76255] text-white'
+                : 'bg-[#f4c7c2] text-[#1e1513] hover:bg-[#e76255] hover:text-white'
+            }`}
+          >
+            {f}
+          </button>
+        ))}
       </div>
 
       {/* Event cards */}
-      <main className="self-stretch flex items-start pt-0 pb-5 pl-[57px] pr-[63px] box-border max-w-full shrink-0 mq800:pl-7 mq800:pr-[31px]">
-        <EventCards />
+      <main className="mx-auto max-w-[1180px] px-6 pt-10 pb-16 w-full">
+        {filtered.length === 0 ? (
+          <p className="text-center text-[16px] text-[#1e1513]/60 py-16 font-['Poppins']">No events match your search.</p>
+        ) : (
+          <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((event, i) => (
+              <div key={i} className="rounded-[16px] bg-white p-4 shadow-[0_8px_20px_rgba(0,0,0,0.12)]">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  width={392}
+                  height={160}
+                  className="h-[160px] w-full rounded-[12px] object-cover"
+                />
+                <h3 className="mt-4 text-[20px] font-bold text-[#1e1513] font-['Poppins']">{event.title}</h3>
+                <p className="mt-1 text-[14px] font-medium text-[#1e1513]/70 font-['Poppins']">
+                  {event.date} • {event.time} • {event.location}
+                </p>
+                <p className="mt-3 text-[14px] leading-[1.45] text-[#1e1513]/75 font-['Poppins']">{event.description}</p>
+                <a href="#" className="mt-3 inline-block text-[14px] font-semibold text-[#e76255] hover:underline font-['Poppins']">Read More</a>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Calendar button */}
+        <div className="mt-10 flex justify-center">
+          <Link href="/calendar" className="rounded-full bg-[#1e1513] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:opacity-85 font-['Poppins']">
+            Calendar
+          </Link>
+        </div>
       </main>
 
       <LocofyFooter />
